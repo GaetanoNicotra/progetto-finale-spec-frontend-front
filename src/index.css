@@ -1,3 +1,8 @@
+/* BODY */
+body {
+  background-image: linear-gradient(to right, #00c6ff, #0073ffc9, #00c6ff);
+}
+
 /* HEADER */
 header {
   padding: 30px;
@@ -8,13 +13,18 @@ header {
   color: white
 }
 
+/* INPUT DI RICERCA/FILTRAGGIO */
+.operation {
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
 /* FOOTER */
 footer {
   display: flex;
   justify-content: space-around;
   background-color: rgb(31, 31, 31);
   color: white;
-  position: fixed;
   bottom: 0;
   width: 100%;
 }
