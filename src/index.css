@@ -25,6 +25,6 @@ footer {
   justify-content: space-around;
   background-color: rgb(31, 31, 31);
   color: white;
-  bottom: 0;
   width: 100%;
+  position: sticky;
 }
