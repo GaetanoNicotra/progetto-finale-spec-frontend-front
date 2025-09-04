@@ -1,13 +1,11 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { useProducts } from '../contexts/ProductsContext'
-
 
 const ProductsCards = () => {
 
-    // consumo del context
-    const { products, setProducts } = useProducts();
+    // variabile di stato per salvare i prodotti
+    const [products, setProducts] = useState([]);
 
     // variabile di stato per la ricerca per titolo
     const [searchProduct, setSearchProduct] = useState('')
@@ -18,23 +16,15 @@ const ProductsCards = () => {
     // variabile di stato per ordinamento A-Z Z-A
     const [order, setOrder] = useState('A-Z')
 
-    // // variabile di stato per i dati dell'API
-    // const [products, setProducts] = useState([])
-
     // funzione per recuperare tutti i prodotti
     useEffect(() => {
         async function getProducts() {
             try {
-                const [resDevice, resScooters] = await Promise.all([
-                    fetch('http://localhost:3001/devices'),
-                    fetch('http://localhost:3001/electricscooters')
-                ])
+                const resDevice = await fetch('http://localhost:3001/devices')
 
-                const [devices, scooters] = await Promise.all([
-                    resDevice.json(),
-                    resScooters.json()])
+                const devices = await resDevice.json()
 
-                setProducts([...devices, ...scooters])
+                setProducts(devices)
             } catch (error) {
                 console.error('Errore nel recupero dei dati', error)
             }
@@ -84,13 +74,12 @@ const ProductsCards = () => {
                     <option value="smartphone">Smartphone</option>
                     <option value="tablet">Tablet</option>
                     <option value="smartwatch">Smartwatch</option>
-                    <option value="electric-scooter">Electricscooter</option>
                 </select>
+
             </div>
 
             {orderedProducts.length === 0 ? <div className='text-white fs-2 mt-3'>Nessun risultato trovato..</div>
                 : orderedProducts.map((p) => {
-                    console.log(orderedProducts)
                     return (
 
                         <div className='col-lg-3 col-md-4 col-sm-6 mb-4' key={p.id}>

@@ -1,42 +1,84 @@
 import React from 'react'
 import { useParams } from 'react-router-dom';
-import { useProducts } from '../contexts/ProductsContext';
+import { useEffect, useState } from 'react';
 
 const ProductsDetail = () => {
-
+    //Recupero l'ID dal parametro dell'URL.
     const { id } = useParams();
-    const { products } = useProducts();
 
-    const product = products.find(p => String(p.id) === id);
+    // variabile di stao per contenere i products
+    const [product, setProduct] = useState(null);
+
+    //  funzione per recuperare i singoli prodotti
+    useEffect(() => {
+        async function getProductDetail() {
+            try {
+                const res = await fetch(`http://localhost:3001/devices/${id}`);
+
+                // Controllo se la risposta non è OK 
+                if (!res.ok) {
+                    throw new Error('Prodotto non trovato');
+                }
+                const data = await res.json();
+
+                setProduct(data);
+            } catch (error) {
+                console.error('Errore nel recupero dei dati', error);
+                // Imposta 'product' su 'null' per mostrare il messaggio di errore.
+                setProduct(null);
+            }
+        }
+        getProductDetail();
+    }, [id]);
 
     return (
-        <div className="container">
+        <div className="container my-5">
             {product ? (
-                <div className="row">
+                <div className="row g-4">
+                    {/* Immagine prodotto */}
                     <div className="col-lg-4">
-                        <div className="card">
-                            <img src="..." className="card-img-top" alt="img-articolo" />
+                        <div className="card bg-secondary text-white border-secondary h-100">
+                            <img src={product.device.image} className="card-img-top" alt={product.device.title} />
                             <div className="card-body">
-                                <p className="card-text">{product.title}</p>
+                                <h4 className="card-title ">{product.device.title}</h4>
                             </div>
                         </div>
                     </div>
-                    <div className="col-6">
-                        <div className="card">
+
+                    {/* Dettagli prodotto */}
+                    <div className="col-lg-8">
+                        <div className="card  text-white border-secondary h-100">
                             <div className="card-body">
-                                <h5 className="card-title">Card title</h5>
-                                <h6 className="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
-                                <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-                                <a href="#" className="card-link">Card link</a>
+                                <h3 className="card-title text-dark">{product.device.brand}</h3>
+                                <h4 className="card-subtitle mb-2 mt-3 text-success">{product.device.price}€</h4>
+                                <ul className="list-group list-group-flush">
+                                    <li className="list-group-item  text-black">
+                                        <strong>Categoria:</strong> {product.device.category}
+                                    </li>
+                                    <li className="list-group-item  text-black">
+                                        <strong>Colori:</strong> {product.device.colors.join(', ')}
+                                    </li>
+                                    <li className="list-group-item  text-black">
+                                        <strong>RAM:</strong> {product.device.ram} GB
+                                    </li>
+
+                                    <li className="list-group-item  text-black">
+                                        <strong>Memoria:</strong> {product.device.storage} GB
+                                    </li>
+                                    <li className="list-group-item text-black">
+                                        <strong>Display:</strong> {product.device.sizeScreen}"
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
                 </div>
             ) : (
-                <div className="text-white fs-4 mt-5">Prodotto non trovato o in caricamento...</div>
+                <h3 className="text-white mt-5">Prodotto non trovato o in caricamento...</h3>
             )}
         </div>
-    )
+    );
+
 }
 
-export default ProductsDetail
+export default ProductsDetail;
