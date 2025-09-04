@@ -1,7 +1,13 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
+import { useProducts } from '../contexts/ProductsContext'
+
 
 const ProductsCards = () => {
+
+    // consumo del context
+    const { products, setProducts } = useProducts();
 
     // variabile di stato per la ricerca per titolo
     const [searchProduct, setSearchProduct] = useState('')
@@ -12,8 +18,8 @@ const ProductsCards = () => {
     // variabile di stato per ordinamento A-Z Z-A
     const [order, setOrder] = useState('A-Z')
 
-    // variabile di stato per i dati dell'API
-    const [products, setProducts] = useState([])
+    // // variabile di stato per i dati dell'API
+    // const [products, setProducts] = useState([])
 
     // funzione per recuperare tutti i prodotti
     useEffect(() => {
@@ -45,9 +51,9 @@ const ProductsCards = () => {
     // ordinamento alfabetico
     const orderedProducts = [...filteredProducts].sort((a, b) => {
         if (order === 'A-Z') {
-            return a.title.localeCompare(b.title);
+            return a.title.trim().localeCompare(b.title);
         } else if (order === 'Z-A') {
-            return b.title.localeCompare(a.title);
+            return b.title.trim().localeCompare(a.title);
         } else {
             return 0;
         }
@@ -83,15 +89,19 @@ const ProductsCards = () => {
             </div>
 
             {orderedProducts.length === 0 ? <div className='text-white fs-2 mt-3'>Nessun risultato trovato..</div>
-                : orderedProducts.map((p, index) => {
+                : orderedProducts.map((p) => {
+                    console.log(orderedProducts)
                     return (
 
-                        <div className='col-lg-3 col-md-4 col-sm-6 mb-4' key={index}>
-                            <div className='card p-2 h-100'>
-                                <h5>{p.title}</h5>
-                                <p>{p.category} {p.category === 'tablet' ? '🖥️' : p.category === 'smartphone' ? '📱' : p.category === 'smartwatch' ? '⌚' : '🛴'}</p>
-                            </div>
+                        <div className='col-lg-3 col-md-4 col-sm-6 mb-4' key={p.id}>
+                            <Link to={`/product/${p.id}`}>
+                                <div className='card p-2 h-100'>
+                                    <h5>{p.title}</h5>
+                                    <p>{p.category} {p.category === 'tablet' ? '🖥️' : p.category === 'smartphone' ? '📱' : p.category === 'smartwatch' ? '⌚' : '🛴'}</p>
+                                </div>
+                            </Link>
                         </div>
+
                     )
                 })}
         </>

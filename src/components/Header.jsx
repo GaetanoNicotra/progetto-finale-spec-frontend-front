@@ -1,10 +1,11 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Header = () => {
     return (
         <>
             <header>
-                <h2>TechnoShop 🖥️</h2>
+                <Link to={'/'}><h2 className='text-white '>TechnoShop 🖥️</h2></Link>
                 <p>⭐</p>
             </header>
         </>
