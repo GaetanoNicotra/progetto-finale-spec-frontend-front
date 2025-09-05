@@ -6,7 +6,7 @@ const ProductsDetail = () => {
     //Recupero l'ID dal parametro dell'URL.
     const { id } = useParams();
 
-    // variabile di stao per contenere i products
+    // variabile di stato per contenere i products
     const [product, setProduct] = useState(null);
 
     //  funzione per recuperare i singoli prodotti

@@ -19,6 +19,12 @@ header {
   border-radius: 10px;
 }
 
+.no-decoration {
+  text-decoration: none;
+  color: inherit;
+}
+
+
 /* FOOTER */
 footer {
   display: flex;

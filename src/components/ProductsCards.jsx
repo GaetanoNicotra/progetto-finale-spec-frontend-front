@@ -1,10 +1,11 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import { useCompare } from '../context/CompareContext'
 
 const ProductsCards = () => {
 
-    // variabile di stato per salvare i prodotti
+    // variabile di stato per salvare tutti i prodotti
     const [products, setProducts] = useState([]);
 
     // variabile di stato per la ricerca per titolo
@@ -15,6 +16,9 @@ const ProductsCards = () => {
 
     // variabile di stato per ordinamento A-Z Z-A
     const [order, setOrder] = useState('A-Z')
+
+    // destrutturazione del custom hook
+    const { compareIds, toggleCompare } = useCompare();
 
     // funzione per recuperare tutti i prodotti
     useEffect(() => {
@@ -83,12 +87,16 @@ const ProductsCards = () => {
                     return (
 
                         <div className='col-lg-3 col-md-4 col-sm-6 mb-4' key={p.id}>
-                            <Link to={`/product/${p.id}`}>
+                            <Link to={`/product/${p.id}`} className="no-decoration">
                                 <div className='card p-2 h-100'>
                                     <h5>{p.title}</h5>
                                     <p>{p.category} {p.category === 'tablet' ? '🖥️' : p.category === 'smartphone' ? '📱' : p.category === 'smartwatch' ? '⌚' : '🛴'}</p>
                                 </div>
                             </Link>
+                            <button
+                                className={`btn ${compareIds.includes(p.id) ? 'btn-danger' : 'btn-outline-secondary'}`}
+                                onClick={() => toggleCompare(p.id)}>
+                                {compareIds.includes(p.id) ? 'Rimuovi' : 'Confronta'}</button>
                         </div>
 
                     )
