@@ -5,11 +5,13 @@ import Footer from '../components/Footer'
 
 const DefaultLayouts = () => {
     return (
-        <>
+        <div className="page-wrapper">
             <Header />
-            <Outlet />
+            <main className="main-content">
+                <Outlet />
+            </main>
             <Footer />
-        </>
+        </div>
     )
 }
 

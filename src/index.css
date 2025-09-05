@@ -1,29 +1,62 @@
 /* BODY */
 body {
-  background-image: linear-gradient(to right, #00c6ff, #0073ffc9, #00c6ff);
+  background-image: linear-gradient(135deg, #000000f5, #038cfdde, #303030);
 }
 
 /* HEADER */
 header {
   padding: 30px;
-  background-color: rgba(0, 62, 121, 0.815);
+  background-color: rgba(0, 68, 131, 0.815);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: white
+  color: white;
 }
 
 /* INPUT DI RICERCA/FILTRAGGIO */
 .operation {
-  border: 1px solid black;
-  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  color: white;
 }
 
-.no-decoration {
-  text-decoration: none;
-  color: inherit;
+.operation,
+input,
+select {
+  border-radius: 8px;
+  padding: 6px;
 }
 
+/* CARD */
+.card-home {
+  background: rgba(34, 34, 34, 0.548);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  padding: 1.2rem;
+  color: #ffffff;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+.card-home:hover {
+  transform: scale(1.035);
+  transition: 0.6s;
+}
+
+.card-home button {
+  background-color: white;
+  width: 37%;
+}
 
 /* FOOTER */
 footer {
@@ -32,5 +65,31 @@ footer {
   background-color: rgb(31, 31, 31);
   color: white;
   width: 100%;
-  position: sticky;
+
+}
+
+/* UTILITIES */
+.no-decoration {
+  text-decoration: none;
+  color: inherit;
+}
+
+.custom-b-l {
+  margin-left: 55px;
+}
+
+.custom-b-r {
+  margin-right: 55px;
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  /* Assicura che riempia tutta la finestra */
+}
+
+.main-content {
+  flex: 1;
+  /* Fa crescere il contenuto e spinge il footer in basso */
 }

@@ -41,7 +41,7 @@ const ComparePage = () => {
 
     return (
         <div className="container mt-4">
-            <h2>Confronto Prodotti</h2>
+            <h2 className='text-white mb-5'>Confronto Prodotti</h2>
             <div className="row">
                 {products.map((p) => (
                     <div className="col-md-6" key={p.device.id}>
@@ -54,7 +54,7 @@ const ComparePage = () => {
                     </div>
                 ))}
             </div>
-            <button className="btn btn-warning" onClick={clearCompare}>Svuota il confronto</button>
+            <button className="btn btn-danger" onClick={clearCompare}>Svuota</button>
         </div>
     );
 };
