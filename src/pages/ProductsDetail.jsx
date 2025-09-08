@@ -32,51 +32,60 @@ const ProductsDetail = () => {
     }, [id]);
 
     return (
-        <div className="container my-5">
-            {product ? (
-                <div className="row g-4">
-                    {/* Immagine prodotto */}
-                    <div className="col-lg-4">
-                        <div className="card bg-secondary text-white border-secondary h-100">
-                            <img src={product.device.image} className="card-img-top" alt={product.device.title} />
-                            <div className="card-body">
-                                <h4 className="card-title ">{product.device.title}</h4>
+        <>
+
+
+
+            <div className="container my-5">
+                {product ? (
+                    <div className="row g-4">
+                        {/* Immagine prodotto */}
+                        <div className="col-lg-4">
+                            <div className="card-detail text-white border-secondary h-100">
+                                <img src={product.device.image} className="card-img-top" alt={product.device.title} />
+                                <div className="card-body">
+                                    <h4 className="card-title mt-2">{product.device.title}</h4>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    {/* Dettagli prodotto */}
-                    <div className="col-lg-8">
-                        <div className="card  text-white border-secondary h-100">
-                            <div className="card-body">
-                                <h3 className="card-title text-dark">{product.device.brand}</h3>
-                                <h4 className="card-subtitle mb-2 mt-3 text-success">{product.device.price}€</h4>
-                                <ul className="list-group list-group-flush">
-                                    <li className="list-group-item  text-black">
-                                        <strong>Categoria:</strong> {product.device.category}
-                                    </li>
-                                    <li className="list-group-item  text-black">
-                                        <strong>Colori:</strong> {product.device.colors.join(', ')}
-                                    </li>
-                                    <li className="list-group-item  text-black">
-                                        <strong>RAM:</strong> {product.device.ram} GB
-                                    </li>
+                        {/* Dettagli prodotto */}
+                        <div className="col-lg-8">
+                            <div className="card-detail  text-white border-secondary h-100">
+                                <div className="card-body">
+                                    <h3 className="brand">{product.device.brand}</h3>
+                                    <h4 className="card-subtitle mb-2 mt-3 price">{product.device.price} €</h4>
+                                    <ul className="list-group list-group-flush bg-dark">
+                                        <li className="list-group-item  text-black">
+                                            <strong>Categoria:</strong> {product.device.category}
+                                        </li>
+                                        <li className="list-group-item  text-black">
+                                            <strong>Colori:</strong> {product.device.colors.join(', ')}
+                                        </li>
+                                        <li className="list-group-item  text-black">
+                                            <strong>RAM:</strong> {product.device.ram} GB
+                                        </li>
 
-                                    <li className="list-group-item  text-black">
-                                        <strong>Memoria:</strong> {product.device.storage} GB
-                                    </li>
-                                    <li className="list-group-item text-black">
-                                        <strong>Display:</strong> {product.device.sizeScreen}"
-                                    </li>
-                                </ul>
+                                        <li className="list-group-item  text-black">
+                                            <strong>Memoria:</strong> {product.device.storage} GB
+                                        </li>
+                                        <li className="list-group-item text-black">
+                                            <strong>Display:</strong> {product.device.sizeScreen}"
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
+                        <div className="col-12">{product.device.description}</div>
                     </div>
-                </div>
-            ) : (
-                <h3 className="text-white mt-5">Prodotto non trovato o in caricamento...</h3>
-            )}
-        </div>
+                ) : (
+                    <h3 className="text-white mt-5">Prodotto non trovato o in caricamento...</h3>
+                )}
+            </div>
+            <video width="100%" height="200" muted loop autoPlay playsInline className="object-fit-none" >
+                <source src="../public/video/Unveiling Performance _ Galaxy S25 Ultra _ Samsung.mp4" type="video/mp4"></source>
+            </video >
+        </>
     );
 
 }

@@ -31,7 +31,7 @@ select {
   padding: 6px;
 }
 
-/* CARD */
+/* CARD HOME*/
 .card-home {
   background: rgba(34, 34, 34, 0.548);
   border: 1px solid rgba(255, 255, 255, 0.15);
@@ -47,15 +47,60 @@ select {
   justify-content: space-between;
 }
 
-
 .card-home:hover {
   transform: scale(1.035);
   transition: 0.6s;
 }
 
 .card-home button {
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   width: 37%;
+}
+
+
+/* CARD COMPARATORE */
+.card {
+  position: relative;
+  overflow: hidden;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+}
+
+.card img.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transform: translate(-50%, -50%) scale(0.99);
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 1;
+  background-color: #ffffffce;
+}
+
+.card:hover img.overlay {
+  opacity: 1;
+}
+
+/* CARD DETTAGLIO */
+.card-detail {
+  background: rgba(34, 34, 34, 0.548);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  padding: 1.2rem;
+  color: #ffffff;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 /* FOOTER */
@@ -86,10 +131,27 @@ footer {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  /* Assicura che riempia tutta la finestra */
 }
 
 .main-content {
   flex: 1;
-  /* Fa crescere il contenuto e spinge il footer in basso */
+}
+
+.price {
+  background-color: rgb(16, 160, 47);
+  color: rgb(255, 255, 255);
+  width: 10%;
+  text-align: center;
+  border-radius: 10px;
+  padding: 6px 10px;
+}
+
+.brand {
+  background-color: rgba(41, 41, 41, 0.801);
+  color: rgb(255, 255, 255);
+  width: 20%;
+  text-align: center;
+  border-radius: 10px;
+  padding: 5px;
+  padding-bottom: 6px;
 }
