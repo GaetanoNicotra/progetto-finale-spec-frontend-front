@@ -2,6 +2,7 @@ import React from 'react'
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { useCompare } from '../context/CompareContext'
+import { useFavorites } from '../context/FavoritesContext'
 
 const ProductsCards = () => {
 
@@ -17,8 +18,11 @@ const ProductsCards = () => {
     // variabile di stato per ordinamento A-Z Z-A
     const [order, setOrder] = useState('A-Z')
 
-    // destrutturazione del custom hook
+    // destrutturazione del custom hook per il comparatore
     const { compareIds, toggleCompare } = useCompare();
+
+    // destrutturazione del custom hook per i preferiti
+    const { favoritiesIds, toggleFavorities } = useFavorites();
 
     // funzione per recuperare tutti i prodotti
     useEffect(() => {
@@ -97,10 +101,18 @@ const ProductsCards = () => {
                                     <h5>{p.title}</h5>
                                     <p className='fs-5'>{p.category} {p.category === 'tablet' ? '🖥️' : p.category === 'smartphone' ? '📱' : p.category === 'smartwatch' ? '⌚' : '🛴'}</p>
                                 </Link>
-                                <button
-                                    className={`btn ${compareIds.includes(p.id) ? 'btn-outline-danger' : 'btn-outline-primary'}`}
-                                    onClick={() => toggleCompare(p.id)}>
-                                    {compareIds.includes(p.id) ? 'Rimuovi' : 'Aggiungi'}</button>
+
+                                <div className='d-flex justify-content-around'>
+                                    <button
+                                        className={`btn ${compareIds.includes(p.id) ? 'btn-outline-danger' : 'btn-outline-primary'} `}
+                                        onClick={() => toggleCompare(p.id)}>
+                                        {compareIds.includes(p.id) ? 'Rimuovi' : 'Aggiungi'}</button>
+
+                                    <button className='btn btn-warning'
+                                        onClick={() => toggleFavorities(p.id)}>
+                                        {favoritiesIds.includes(p.id) ? <i className="fa-solid fa-star text-warning"></i>
+                                            : <i className="fa-regular fa-star text-warning " ></i>}</button>
+                                </div>
                             </div>
                         </div>
                     )

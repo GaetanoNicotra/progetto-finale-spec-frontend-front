@@ -44,7 +44,7 @@ const ProductsDetail = () => {
                             <div className="card-detail text-white border-secondary h-100">
                                 <img src={product.device.image} className="card-img-top" alt={product.device.title} />
                                 <div className="card-body">
-                                    <h4 className="card-title mt-2">{product.device.title}</h4>
+                                    <h4 className="card-title mt-4">{product.device.title}</h4>
                                 </div>
                             </div>
                         </div>
@@ -54,22 +54,25 @@ const ProductsDetail = () => {
                             <div className="card-detail  text-white border-secondary h-100">
                                 <div className="card-body">
                                     <h3 className="brand">{product.device.brand}</h3>
-                                    <h4 className="card-subtitle mb-2 mt-3 price">{product.device.price} €</h4>
-                                    <ul className="list-group list-group-flush bg-dark">
-                                        <li className="list-group-item  text-black">
+                                    <h4 className="card-subtitle mb-2 mt-3 price mb-4">{product.device.price} €</h4>
+                                    <ul className="list-detail">
+                                        <li className="list-group-item pt-3">
                                             <strong>Categoria:</strong> {product.device.category}
                                         </li>
-                                        <li className="list-group-item  text-black">
+                                        <hr />
+                                        <li className="list-group-item">
                                             <strong>Colori:</strong> {product.device.colors.join(', ')}
                                         </li>
-                                        <li className="list-group-item  text-black">
+                                        <hr />
+                                        <li className="list-group-item">
                                             <strong>RAM:</strong> {product.device.ram} GB
                                         </li>
-
-                                        <li className="list-group-item  text-black">
+                                        <hr />
+                                        <li className="list-group-item">
                                             <strong>Memoria:</strong> {product.device.storage} GB
                                         </li>
-                                        <li className="list-group-item text-black">
+                                        <hr />
+                                        <li className="list-group-item pb-3">
                                             <strong>Display:</strong> {product.device.sizeScreen}"
                                         </li>
                                     </ul>
@@ -82,9 +85,10 @@ const ProductsDetail = () => {
                     <h3 className="text-white mt-5">Prodotto non trovato o in caricamento...</h3>
                 )}
             </div>
-            <video width="100%" height="200" muted loop autoPlay playsInline className="object-fit-none" >
+            {/* <video width="100%" height="200" muted loop autoPlay playsInline className="object-fit-none" >
                 <source src="../public/video/Unveiling Performance _ Galaxy S25 Ultra _ Samsung.mp4" type="video/mp4"></source>
-            </video >
+            </video > */}
+            <img className='w-100 img-small' src="/video/iphone-16e-card.png" alt="jumbo-detail" />
         </>
     );
 

@@ -10,11 +10,12 @@ const ComparePage = () => {
     // variabile per contenere i prodotti selezionati
     const [products, setProducts] = useState([]);
 
-    // recupero i prodotti con l'id selezionato
+    // recupero i prodotti con l'id selezionato tramite promise.all per caricare più prodotti in parallelo
     useEffect(() => {
         async function fetchComparedProducts() {
             try {
                 const results = await Promise.all(
+                    //  Il map (crea un nuovo array) e trasforma ogni id in una chiamata fetch
                     compareIds.map(id =>
                         fetch(`http://localhost:3001/devices/${id}`)
                             .then(res => res.json())));
@@ -42,7 +43,6 @@ const ComparePage = () => {
 
     return (
         <>
-
             <div className="container mt-4 mb-5">
                 <h2 className='text-white mb-4'>Confronto Prodotti</h2>
                 <div className='mb-5'>
@@ -71,10 +71,7 @@ const ComparePage = () => {
                     ))}
                 </div>
             </div>
-
-
         </>
-
     );
 };
 

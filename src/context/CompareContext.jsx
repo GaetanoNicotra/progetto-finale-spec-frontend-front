@@ -4,7 +4,7 @@ const CompareContext = createContext();
 
 export const CompareProvider = ({ children }) => {
 
-    // variabile per salvare gli id
+    // variabile per salvare gli id dei prod. da confrontare
     const [compareIds, setCompareIds] = useState([]);
 
     const toggleCompare = (id) => {
