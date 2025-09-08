@@ -53,20 +53,23 @@ const ComparePage = () => {
                     {products.map((p) => (
                         <div className="col-lg-2 col-md-3 col-sm-2 mb-3" key={p.device.id}>
                             <div className="card p-3 mb-3 h-100 ">
-                                <h4>{p.device.title}</h4>
-                                <h4>{p.device.brand}</h4>
-                                <img src={p.device.image} alt="img-product" className='overlay' />
-                                <p className='fs-5'>{p.device.category} {p.device.category === 'tablet' ? '🖥️' : p.device.category === 'smartphone' ? '📱' : p.device.category === 'smartwatch' ? '⌚' : '🛴'}</p>
-                                <p><strong>Prezzo:</strong> € {p.device.price}</p>
-                                <p><strong>colori:</strong> {p.device.colors.join(', ')}</p>
-                                <p><strong>RAM:</strong> {p.device.ram} GB</p>
-                                <p><strong>Memoria:</strong> {p.device.storage} GB</p>
-                                <p><strong>Display:</strong> {p.device.sizeScreen} "</p>
+                                <div className='list-comparison'>
+                                    <h4>{p.device.title}</h4>
+                                    <h4>{p.device.brand}</h4>
+                                    <Link to={`/product/${p.device.id}`}><img src={p.device.image} alt="img-product" className='overlay' /></Link>
+                                    <p className='fs-5'>{p.device.category} {p.device.category === 'tablet' ? '🖥️' : p.device.category === 'smartphone' ? '📱' : p.device.category === 'smartwatch' ? '⌚' : '🛴'}</p>
+                                    <p><strong>Prezzo:</strong> € {p.device.price}</p>
+                                    <p><strong>colori:</strong> {p.device.colors.join(', ')}</p>
+                                    <p><strong>RAM:</strong> {p.device.ram} GB</p>
+                                    <p><strong>Memoria:</strong> {p.device.storage} GB</p>
+                                    <p><strong>Display:</strong> {p.device.sizeScreen} "</p>
+                                </div>
+                                <button
+                                    className='btn btn-danger z-3'
+                                    onClick={() => toggleCompare(p.device.id)}>
+                                    Rimuovi</button>
                             </div>
-                            <button
-                                className='btn btn-danger'
-                                onClick={() => toggleCompare(p.device.id)}>
-                                Rimuovi</button>
+
                         </div>
                     ))}
                 </div>

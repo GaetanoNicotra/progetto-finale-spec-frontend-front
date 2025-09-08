@@ -95,7 +95,6 @@ const ProductsCards = () => {
                     return (
 
                         <div className='col-lg-3 col-md-4 col-sm-6 mb-4' key={p.id}>
-
                             <div className='card card-home p-2 h-100'>
                                 <Link to={`/product/${p.id}`} className="no-decoration">
                                     <h5>{p.title}</h5>
@@ -108,10 +107,10 @@ const ProductsCards = () => {
                                         onClick={() => toggleCompare(p.id)}>
                                         {compareIds.includes(p.id) ? 'Rimuovi' : 'Aggiungi'}</button>
 
-                                    <button className='btn btn-warning'
+                                    <button className={`btn ${favoritiesIds.includes(p.id) ? 'btn-danger' : 'btn-outline-warning'}`}
                                         onClick={() => toggleFavorities(p.id)}>
                                         {favoritiesIds.includes(p.id) ? <i className="fa-solid fa-star text-warning"></i>
-                                            : <i className="fa-regular fa-star text-warning " ></i>}</button>
+                                            : <i className="fa-regular fa-star text-warning" ></i>}</button>
                                 </div>
                             </div>
                         </div>

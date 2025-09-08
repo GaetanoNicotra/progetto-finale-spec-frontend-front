@@ -51,7 +51,7 @@ const ProductsDetail = () => {
 
                         {/* Dettagli prodotto */}
                         <div className="col-lg-8">
-                            <div className="card-detail  text-white border-secondary h-100">
+                            <div className="card-detail text-white border-secondary h-100">
                                 <div className="card-body">
                                     <h3 className="brand">{product.device.brand}</h3>
                                     <h4 className="card-subtitle mb-2 mt-3 price mb-4">{product.device.price} €</h4>
@@ -88,7 +88,9 @@ const ProductsDetail = () => {
             {/* <video width="100%" height="200" muted loop autoPlay playsInline className="object-fit-none" >
                 <source src="../public/video/Unveiling Performance _ Galaxy S25 Ultra _ Samsung.mp4" type="video/mp4"></source>
             </video > */}
-            <img className='w-100 img-small' src="/video/iphone-16e-card.png" alt="jumbo-detail" />
+            <div className='text-center bg-light'>
+                <img className='w-50 img-small' src="/video/iphone-16e-card.png" alt="jumbo-detail" />
+            </div>
         </>
     );
 
