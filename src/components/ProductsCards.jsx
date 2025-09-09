@@ -1,11 +1,10 @@
-import React from 'react'
-import { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
-import { useCompare } from '../context/CompareContext'
-import { useFavorites } from '../context/FavoritesContext'
+import React, { useState, useEffect, useCallback } from 'react';
+import { Link } from 'react-router-dom';
+import { useCompare } from '../context/CompareContext';
+import { useFavorites } from '../context/FavoritesContext';
+import { debounce } from 'lodash';
 
 const ProductsCards = () => {
-
     // variabile di stato per salvare tutti i prodotti
     const [products, setProducts] = useState([]);
 
@@ -24,27 +23,45 @@ const ProductsCards = () => {
     // destrutturazione del custom hook per i preferiti
     const { favoritiesIds, toggleFavorities } = useFavorites();
 
+    // Stato per input di ricerca titolo (debounced)
+    const [searchInput, setSearchInput] = useState('');
+
     // funzione per recuperare tutti i prodotti
     useEffect(() => {
         async function getProducts() {
             try {
-                const resDevice = await fetch('http://localhost:3001/devices')
-
-                const devices = await resDevice.json()
-
-                setProducts(devices)
+                const resDevice = await fetch('http://localhost:3001/devices');
+                const data = await resDevice.json();
+                setProducts(data);
             } catch (error) {
-                console.error('Errore nel recupero dei dati', error)
+                console.error('Errore nel recupero prodotti:', error);
             }
         }
-        getProducts()
-    }, [])
+        getProducts();
+    }, []);
+
+    // Funzione di debounce per il filtro per titolo
+    const debouncedProduct = useCallback(
+        debounce((valDigitato) => {
+            setSearchProduct(valDigitato);
+        }, 500),
+        []
+    );
+
+    // Quando cambia il valore input aggiorna lo stato input immediatamente ma solo dopo il debounce
+    const InputChange = (e) => {
+        // prendo il testo scritto nell'input
+        const valDigitato = e.target.value;
+        setSearchInput(valDigitato); // mantengo il valore visibile nell’input così l’utente vede ciò che digita
+        debouncedProduct(valDigitato); //chiamo la funzione di debounce che aggiorna setSearchProduct dopo 500ms
+    };
 
     // ricerca per genere
-    const filteredGenre = searchGenre ? products.filter(p => p.category === searchGenre) : products;
+    const filteredGenre = searchGenre ? products.filter((p) => p.category === searchGenre) : products;
 
-    // ricerca per titolo
-    const filteredProducts = filteredGenre.filter(p => p.title.toLowerCase().includes(searchProduct.toLocaleLowerCase()))
+    // ricerca filtro per titolo 
+    const filteredProducts = filteredGenre.filter((p) =>
+        p.title.toLowerCase().includes(searchProduct.toLowerCase()));
 
     // ordinamento alfabetico
     const orderedProducts = [...filteredProducts].sort((a, b) => {
@@ -57,16 +74,15 @@ const ProductsCards = () => {
         }
     });
 
-
     return (
         <>
             <div className='d-flex operation mb-4 mt-4 p-2'>
                 <div className='me-5'>
                     <p>Cerca prodotti</p>
                     <input type="text"
-                        value={searchProduct}
+                        value={searchInput}
                         placeholder='Cerca per titolo..'
-                        onChange={(e) => setSearchProduct(e.target.value)}
+                        onChange={InputChange}
                         required
                     />
                 </div>
@@ -121,3 +137,5 @@ const ProductsCards = () => {
 }
 
 export default ProductsCards
+
+

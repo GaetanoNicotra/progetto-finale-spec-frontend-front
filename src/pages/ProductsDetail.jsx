@@ -33,9 +33,6 @@ const ProductsDetail = () => {
 
     return (
         <>
-
-
-
             <div className="container my-5">
                 {product ? (
                     <div className="row g-4">
