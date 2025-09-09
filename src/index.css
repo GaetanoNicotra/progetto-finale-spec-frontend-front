@@ -3,10 +3,25 @@ body {
   background-image: linear-gradient(135deg, #000000f5, #038cfdde, #303030);
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Roboto', sans-serif;
+
+}
+
+p {
+  font-family: 'Manrope', sans-serif;
+}
+
 /* HEADER */
 header {
   padding: 30px;
   background-color: rgba(0, 68, 131, 0.815);
+  box-shadow: 0 30px 25px rgba(0, 0, 0, 0.397);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -133,6 +148,42 @@ footer {
   width: 100%;
 }
 
+/* LOADER */
+.loader {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  display: inline-block;
+  border-top: 10px solid #FFF;
+  border-right: 10px solid transparent;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+.loader::after {
+  content: '';
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border-left: 10px solid #2e2e2e;
+  border-bottom: 10px solid transparent;
+  animation: rotation 0.5s linear infinite reverse;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 /* UTILITIES */
 .no-decoration {
   text-decoration: none;
@@ -163,7 +214,7 @@ footer {
   width: 10%;
   text-align: center;
   border-radius: 10px;
-  padding: 6px 10px;
+  padding: 6px 1px;
 }
 
 .brand {
@@ -182,4 +233,10 @@ footer {
 
 .btn:hover .fa-star {
   color: white !important;
+}
+
+.prefer:hover {
+  transform: scale(1.035);
+  transition: 0.4s;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }

@@ -114,14 +114,14 @@ const ProductsCards = () => {
                             <div className='card card-home p-2 h-100'>
                                 <Link to={`/product/${p.id}`} className="no-decoration">
                                     <h5>{p.title}</h5>
-                                    <p className='fs-5'>{p.category} {p.category === 'tablet' ? '🖥️' : p.category === 'smartphone' ? '📱' : p.category === 'smartwatch' ? '⌚' : '🛴'}</p>
+                                    <p className='fs-6'>{p.category} {p.category === 'tablet' ? '🖥️' : p.category === 'smartphone' ? '📱' : p.category === 'smartwatch' ? '⌚' : '🛴'}</p>
                                 </Link>
 
                                 <div className='d-flex justify-content-around'>
                                     <button
                                         className={`btn ${compareIds.includes(p.id) ? 'btn-outline-danger' : 'btn-outline-primary'} `}
                                         onClick={() => toggleCompare(p.id)}>
-                                        {compareIds.includes(p.id) ? 'Rimuovi' : 'Aggiungi'}</button>
+                                        {compareIds.includes(p.id) ? 'Rimuovi' : <i class="fa-solid fa-scale-unbalanced-flip"></i>}</button>
 
                                     <button className={`btn ${favoritiesIds.includes(p.id) ? 'btn-danger' : 'btn-outline-warning'}`}
                                         onClick={() => toggleFavorities(p.id)}>

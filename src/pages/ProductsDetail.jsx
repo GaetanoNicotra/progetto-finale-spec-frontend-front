@@ -1,6 +1,8 @@
 import React from 'react'
 import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
+import { useCompare } from '../context/CompareContext';
+import { useFavorites } from '../context/FavoritesContext';
 
 const ProductsDetail = () => {
     //Recupero l'ID dal parametro dell'URL.
@@ -8,6 +10,12 @@ const ProductsDetail = () => {
 
     // variabile di stato per contenere i products
     const [product, setProduct] = useState(null);
+
+    // destrutturazione del custom hook per il comparatore
+    const { compareIds, toggleCompare } = useCompare();
+
+    // destrutturazione del custom hook per i preferiti
+    const { favoritiesIds, toggleFavorities } = useFavorites();
 
     //  funzione per recuperare i singoli prodotti
     useEffect(() => {
@@ -39,9 +47,20 @@ const ProductsDetail = () => {
                         {/* Immagine prodotto */}
                         <div className="col-lg-4">
                             <div className="card-detail text-white border-secondary h-100">
-                                <img src={product.device.image} className="card-img-top" alt={product.device.title} />
+                                <img src={product.device.image} className="card-img-top rounded" alt={product.device.title} />
                                 <div className="card-body">
                                     <h4 className="card-title mt-4">{product.device.title}</h4>
+                                </div>
+                                <div className='d-flex justify-content-between mt-3'>
+                                    <button
+                                        className={`btn ${compareIds.includes(product.device.id) ? 'btn-danger' : 'btn-primary'} `}
+                                        onClick={() => toggleCompare(product.device.id)}>
+                                        {compareIds.includes(product.device.id) ? <div className='d-flex align-items-center'>Rimuovi<i class="fa-solid fa-scale-unbalanced-flip ms-2"></i></div> : <div className='d-flex align-items-center'>Aggiungi<i class="fa-solid fa-scale-unbalanced-flip ms-2"></i></div>}</button>
+
+                                    <button className={`btn ${favoritiesIds.includes(product.device.id) ? 'btn-danger' : 'btn-warning'}`}
+                                        onClick={() => toggleFavorities(product.device.id)}>
+                                        {favoritiesIds.includes(product.device.id) ? <i className="fa-solid fa-star text-warning"></i>
+                                            : <i className="fa-regular fa-star text-white" ></i>}</button>
                                 </div>
                             </div>
                         </div>
@@ -76,21 +95,50 @@ const ProductsDetail = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-12">{product.device.description}</div>
+
+                        <div className="col-lg-12">
+                            <div className="card-detail text-white border-secondary">
+                                <div className="card-body">
+                                    {product.device.category === 'tablet' ? (
+                                        <>
+                                            I tablet <strong>{product.device.brand}</strong> rappresentano il perfetto equilibrio tra uno smartphone e un laptop.
+                                            Caratterizzati da schermi ampi e interfacce touch intuitive, sono ideali per leggere, studiare, lavorare, guardare film o navigare online.
+                                            Leggeri e facili da trasportare, offrono una buona autonomia e compatibilità con accessori come tastiere o pennini digitali.
+                                            La loro versatilità li rende adatti sia a un uso professionale che domestico.
+                                        </>
+                                    ) : product.device.category === 'smartphone' ? (
+                                        <>
+                                            Gli smartphone <strong>{product.device.brand}</strong> sono dispositivi multifunzione indispensabili nella vita quotidiana.
+                                            Consentono di comunicare, navigare su internet, scattare foto, registrare video e utilizzare migliaia di app per ogni esigenza, dal lavoro all’intrattenimento.
+                                            Dotati di display touch ad alta risoluzione e processori sempre più potenti, offrono esperienze fluide e personalizzabili.
+                                            Grazie alla connettività avanzata (4G, 5G, Wi-Fi, Bluetooth), permettono di restare sempre connessi ovunque ci si trovi.
+                                        </>
+                                    ) : product.device.category === 'smartwatch' ? (
+                                        <>
+                                            Gli smartwatch <strong>{product.device.brand}</strong> sono orologi intelligenti progettati per offrire funzionalità aggiuntive direttamente al polso.
+                                            Si collegano allo smartphone per ricevere notifiche, controllare la musica, gestire chiamate o monitorare l'attività fisica e la salute (battito cardiaco, sonno, passi, ecc.).
+                                            Perfetti per uno stile di vita attivo o per chi cerca comodità e tecnologia in un unico accessorio elegante e funzionale.
+                                        </>
+                                    ) : (
+                                        <>
+                                            <strong>{product.device.brand}</strong>
+                                        </>
+                                    )}
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-12 card-deetail text-white">
+                        </div>
                     </div>
                 ) : (
-                    <h3 className="text-white mt-5">Prodotto non trovato o in caricamento...</h3>
+                    <div><h3 className='text-white'>Prodotto in caricamento..</h3>
+                        <div className="position-fixed top-0 start-0 w-100 h-100 d-flex justify-content-center align-items-center bg-dark bg-opacity-25" >
+                            <span className="loader"></span>
+                        </div></div>
                 )}
-            </div>
-            {/* <video width="100%" height="200" muted loop autoPlay playsInline className="object-fit-none" >
-                <source src="../public/video/Unveiling Performance _ Galaxy S25 Ultra _ Samsung.mp4" type="video/mp4"></source>
-            </video > */}
-            <div className='text-center bg-light'>
-                <img className='w-50 img-small' src="/video/iphone-16e-card.png" alt="jumbo-detail" />
             </div>
         </>
     );
-
 }
 
 export default ProductsDetail;
