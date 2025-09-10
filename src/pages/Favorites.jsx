@@ -26,7 +26,6 @@ const Favorites = () => {
                     )
                 )
                 setProdFavorities(results);
-                console.log(results)
             } catch (error) {
                 console.error("Errore nel caricamento dei prodotti da confrontare", error);
             }

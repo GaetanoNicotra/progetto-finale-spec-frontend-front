@@ -61,7 +61,7 @@ const ProductsCards = () => {
 
     // ricerca filtro per titolo 
     const filteredProducts = filteredGenre.filter((p) =>
-        p.title.toLowerCase().includes(searchProduct.toLowerCase()));
+        p.title.toLowerCase().replace(/\s+/g, '').includes(searchProduct.toLowerCase().trim().replace(/\s+/g, '')));// (/\s+/g) significa: “trova uno o più spazi ovunque nella stringa” e sostituiscili con ,''
 
     // ordinamento alfabetico
     const orderedProducts = [...filteredProducts].sort((a, b) => {
@@ -121,7 +121,7 @@ const ProductsCards = () => {
                                     <button
                                         className={`btn ${compareIds.includes(p.id) ? 'btn-outline-danger' : 'btn-outline-primary'} `}
                                         onClick={() => toggleCompare(p.id)}>
-                                        {compareIds.includes(p.id) ? 'Rimuovi' : <i class="fa-solid fa-scale-unbalanced-flip"></i>}</button>
+                                        {compareIds.includes(p.id) ? 'Rimuovi' : <i className="fa-solid fa-scale-unbalanced-flip"></i>}</button>
 
                                     <button className={`btn ${favoritiesIds.includes(p.id) ? 'btn-danger' : 'btn-outline-warning'}`}
                                         onClick={() => toggleFavorities(p.id)}>
