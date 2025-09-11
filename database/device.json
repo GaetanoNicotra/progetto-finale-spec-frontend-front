@@ -1,0 +1,742 @@
+[
+    {
+        "id": 1,
+        "createdAt": "2025-09-04T10:00:00.000Z",
+        "updatedAt": "2025-09-04T10:00:00.000Z",
+        "title": "iPhone 16",
+        "category": "smartphone",
+        "brand": "Apple",
+        "colors": [
+            "black",
+            "white",
+            "pink",
+            "teal",
+            "ultramarine"
+        ],
+        "price": 960,
+        "sizeScreen": 6.1,
+        "ram": 6,
+        "storage": 128,
+        "image": "https://www.apple.com/newsroom/images/2024/09/apple-debuts-iphone-16-pro-and-iphone-16-pro-max/article/Apple-iPhone-16-Pro-hero-geo-240909_inline.jpg.large.jpg"
+    },
+    {
+        "id": 2,
+        "createdAt": "2025-09-04T10:00:00.000Z",
+        "updatedAt": "2025-09-04T10:00:00.000Z",
+        "title": "iPhone 16 Pro",
+        "category": "smartphone",
+        "brand": "Apple",
+        "colors": [
+            "black titanium",
+            "white titanium",
+            "natural titanium",
+            "desert titanium"
+        ],
+        "price": 1199,
+        "sizeScreen": 6.3,
+        "ram": 8,
+        "storage": 256,
+        "image": "https://www.apple.com/v/iphone-16-pro/f/images/overview/product-stories/design/color__eaawe4bmivki_xlarge.jpg"
+    },
+    {
+        "id": 3,
+        "createdAt": "2025-09-04T10:00:00.000Z",
+        "updatedAt": "2025-09-04T10:00:00.000Z",
+        "title": "iPhone 16 Pro Max",
+        "category": "smartphone",
+        "brand": "Apple",
+        "colors": [
+            "black titanium",
+            "white titanium",
+            "natural titanium",
+            "desert titanium"
+        ],
+        "price": 1499,
+        "sizeScreen": 6.9,
+        "ram": 8,
+        "storage": 256,
+        "image": "https://www.apple.com/v/iphone-16-pro/f/images/overview/product-stories/design/color__eaawe4bmivki_xlarge.jpg"
+    },
+    {
+        "id": 4,
+        "createdAt": "2025-09-04T10:00:00.000Z",
+        "updatedAt": "2025-09-04T10:00:00.000Z",
+        "title": "Galaxy S25",
+        "category": "smartphone",
+        "brand": "Samsung",
+        "colors": [
+            "Icyblue",
+            "Mint",
+            "Navy",
+            "Silver Shadow"
+        ],
+        "price": 929,
+        "sizeScreen": 6.2,
+        "ram": 6,
+        "storage": 256,
+        "image": "https://image-us.samsung.com/SamsungUS/home/smartphones/galaxy-s25/SCOMPARA-188-BuyPage-S25-S25Plus-Group-Global-800x600.jpg?$product-details-jpg$"
+    },
+    {
+        "id": 5,
+        "createdAt": "2025-09-04T10:00:00.000Z",
+        "updatedAt": "2025-09-04T10:00:00.000Z",
+        "title": "Galaxy S25 Plus",
+        "category": "smartphone",
+        "brand": "Samsung",
+        "colors": [
+            "Icyblue",
+            "Mint",
+            "Navy",
+            "Silver Shadow"
+        ],
+        "price": 1189,
+        "sizeScreen": 6.7,
+        "ram": 12,
+        "storage": 256,
+        "image": "https://image-us.samsung.com/SamsungUS/home/smartphones/galaxy-s25/SCOMPARA-188-BuyPage-S25-S25Plus-Group-Global-800x600.jpg?$product-details-jpg$"
+    },
+    {
+        "id": 6,
+        "createdAt": "2025-09-04T10:00:00.000Z",
+        "updatedAt": "2025-09-04T10:00:00.000Z",
+        "title": "Galaxy S25 Ultra",
+        "category": "smartphone",
+        "brand": "Samsung",
+        "colors": [
+            "Titanium Black",
+            "Titanium Gray",
+            "Titanium Silverblue",
+            "Titanium White Silver"
+        ],
+        "price": 1619,
+        "sizeScreen": 6.9,
+        "ram": 12,
+        "storage": 512,
+        "image": "https://media.ldlc.com/r1600/ld/products/00/06/20/62/LD0006206274.jpg"
+    },
+    {
+        "id": 7,
+        "createdAt": "2025-09-04T10:00:00.000Z",
+        "updatedAt": "2025-09-04T10:00:00.000Z",
+        "title": "Galaxy Tab S9 Ultra",
+        "category": "tablet",
+        "brand": "Samsung",
+        "colors": [
+            "Graphite",
+            "Beige",
+            "Lavender"
+        ],
+        "price": 1249,
+        "sizeScreen": 14.6,
+        "ram": 12,
+        "storage": 512,
+        "image": "https://m.media-amazon.com/images/I/61avzpbJRqL.jpg"
+    },
+    {
+        "id": 8,
+        "createdAt": "2025-09-04T10:00:00.000Z",
+        "updatedAt": "2025-09-04T10:00:00.000Z",
+        "title": "iPad Pro 12.9 (6th Gen)",
+        "category": "tablet",
+        "brand": "Apple",
+        "colors": [
+            "Silver",
+            "Space Gray"
+        ],
+        "price": 1299,
+        "sizeScreen": 12.9,
+        "ram": 16,
+        "storage": 256,
+        "image": "https://cdsassets.apple.com/live/SZLF0YNV/images/sp/111979_ipad-pro-12-2018.png"
+    },
+    {
+        "id": 9,
+        "createdAt": "2025-09-04T10:00:00.000Z",
+        "updatedAt": "2025-09-04T10:00:00.000Z",
+        "title": "Pad 6 Pro",
+        "category": "tablet",
+        "brand": "Xiaomi",
+        "colors": [
+            "Gray",
+            "Blue",
+            "White"
+        ],
+        "price": 499,
+        "sizeScreen": 12.4,
+        "ram": 8,
+        "storage": 256,
+        "image": "https://immagini.trovaprezzi.it/prodotti/xiaomi_pad_6_pro.jpg"
+    },
+    {
+        "id": 10,
+        "createdAt": "2025-09-04T10:00:00.000Z",
+        "updatedAt": "2025-09-04T10:00:00.000Z",
+        "title": "Tab P12 Pro",
+        "category": "tablet",
+        "brand": "Lenovo",
+        "colors": [
+            "Slate Grey",
+            "Misty Blue"
+        ],
+        "price": 699,
+        "sizeScreen": 12.6,
+        "ram": 8,
+        "storage": 256,
+        "image": "https://m.media-amazon.com/images/I/612OIBlzHbL._UF1000,1000_QL80_.jpg"
+    },
+    {
+        "id": 11,
+        "createdAt": "2025-09-04T10:00:00.000Z",
+        "updatedAt": "2025-09-04T10:00:00.000Z",
+        "title": "Fire HD 10 Plus",
+        "category": "tablet",
+        "brand": "Amazon",
+        "colors": [
+            "Black",
+            "Blue"
+        ],
+        "price": 179,
+        "sizeScreen": 10.1,
+        "ram": 4,
+        "storage": 64,
+        "image": "https://m.media-amazon.com/images/G/01/kindle/journeys/obm87zLmbZZ2FnF3yH3CQlaK2mz74NJ95jimp31nmMSk3D/ODZkZGQyODIt._CB578475036_.png"
+    },
+    {
+        "id": 12,
+        "createdAt": "2025-09-04T10:00:00.000Z",
+        "updatedAt": "2025-09-04T10:00:00.000Z",
+        "title": "Galaxy Watch 6 Classic",
+        "category": "smartwatch",
+        "brand": "Samsung",
+        "colors": [
+            "Black",
+            "Silver"
+        ],
+        "price": 469,
+        "sizeScreen": 1.5,
+        "ram": 1.5,
+        "storage": 16,
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMcgItMrpd8SYjvjDlJkIT6ghbsMRjwggp6Q&s"
+    },
+    {
+        "id": 13,
+        "createdAt": "2025-09-04T10:00:00.000Z",
+        "updatedAt": "2025-09-04T10:00:00.000Z",
+        "title": "Watch Series 9",
+        "category": "smartwatch",
+        "brand": "Apple",
+        "colors": [
+            "Silver",
+            "Graphite",
+            "Gold",
+            "Red"
+        ],
+        "price": 399,
+        "sizeScreen": 1.9,
+        "ram": 1,
+        "storage": 32,
+        "image": "https://www.apple.com/newsroom/images/2023/09/apple-introduces-the-advanced-new-apple-watch-series-9/article/Apple-Watch-SE-6-up-230912_big.jpg.large.jpg"
+    },
+    {
+        "id": 14,
+        "createdAt": "2025-09-04T10:00:00.000Z",
+        "updatedAt": "2025-09-04T10:00:00.000Z",
+        "title": "Watch S2 Pro",
+        "category": "smartwatch",
+        "brand": "Xiaomi",
+        "colors": [
+            "Black",
+            "White",
+            "Blue"
+        ],
+        "price": 179,
+        "sizeScreen": 1.43,
+        "ram": 0.256,
+        "storage": 4,
+        "image": "https://www.notebookcheck.it/fileadmin/Notebooks/News/_nc3/watchs2rumours.jpg"
+    },
+    {
+        "id": 15,
+        "createdAt": "2025-09-04T10:05:00.000Z",
+        "updatedAt": "2025-09-04T10:05:00.000Z",
+        "title": "iPhone 15",
+        "category": "smartphone",
+        "brand": "Apple",
+        "colors": [
+            "midnight",
+            "pink",
+            "yellow",
+            "green",
+            "blue"
+        ],
+        "price": 849,
+        "sizeScreen": 6.1,
+        "ram": 6,
+        "storage": 128,
+        "image": "https://www.apple.com/newsroom/images/2023/09/apple-unveils-iphone-15-pro-and-iphone-15-pro-max/tile/Apple-iPhone-15-Pro-lineup-hero-230912.jpg.news_app_ed.jpg"
+    },
+    {
+        "id": 16,
+        "createdAt": "2025-09-04T10:05:00.000Z",
+        "updatedAt": "2025-09-04T10:05:00.000Z",
+        "title": "iPhone 15 Pro",
+        "category": "smartphone",
+        "brand": "Apple",
+        "colors": [
+            "natural titanium",
+            "black titanium",
+            "blue titanium",
+            "white titanium"
+        ],
+        "price": 1099,
+        "sizeScreen": 6.1,
+        "ram": 8,
+        "storage": 256,
+        "image": "https://cdsassets.apple.com/live/7WUAS350/images/tech-specs/iphone_15_pro.png"
+    },
+    {
+        "id": 17,
+        "createdAt": "2025-09-04T10:07:00.000Z",
+        "updatedAt": "2025-09-04T10:07:00.000Z",
+        "title": "Galaxy S24",
+        "category": "smartphone",
+        "brand": "Samsung",
+        "colors": [
+            "Cosmic Black",
+            "Bora Purple",
+            "Amber Yellow",
+            "Lime Green"
+        ],
+        "price": 899,
+        "sizeScreen": 6.2,
+        "ram": 8,
+        "storage": 128,
+        "image": "https://images.samsung.com/it/smartphones/galaxy-s24/images/galaxy-s24-highlights-color-carousel-global-mo.jpg?imbypass=true"
+    },
+    {
+        "id": 18,
+        "createdAt": "2025-09-04T10:07:00.000Z",
+        "updatedAt": "2025-09-04T10:07:00.000Z",
+        "title": "Galaxy S24 Ultra",
+        "category": "smartphone",
+        "brand": "Samsung",
+        "colors": [
+            "Phantom Black",
+            "Titan Gray",
+            "Winter Gold"
+        ],
+        "price": 1399,
+        "sizeScreen": 6.8,
+        "ram": 12,
+        "storage": 256,
+        "image": "https://it.static.webuy.com/product_images/Telefonia/Cellulari%20-%20Android/SSAMS928B512GTGLIBA_l.jpg"
+    },
+    {
+        "id": 19,
+        "createdAt": "2025-09-04T10:10:00.000Z",
+        "updatedAt": "2025-09-04T10:10:00.000Z",
+        "title": "Apple Watch Series 10",
+        "category": "smartwatch",
+        "brand": "Apple",
+        "colors": [
+            "Silver",
+            "Space Black",
+            "Starlight"
+        ],
+        "price": 449,
+        "sizeScreen": 1.9,
+        "ram": 2,
+        "storage": 64,
+        "image": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/s10-case-unselect-gallery-1-202503_FMT_WHH?wid=752&hei=720&fmt=p-jpg&qlt=80&.v=T1poMzZuRzBxQ1RzQmhMUHprUE5LZHlVRllKam5abHNZRGludXlMbytKNHlidkR0R3NjTWwrQVNiZ3I2RERPclovcWdSWUQxempSa2dIVnhsNHVhN3ZXdlJRYjdSZWJHVUh4aFVDb0hhVVcwcHBldHBjSVk3TndkU25NUENJakg"
+    },
+    {
+        "id": 20,
+        "createdAt": "2025-09-04T10:11:00.000Z",
+        "updatedAt": "2025-09-04T10:11:00.000Z",
+        "title": "Galaxy Watch 7",
+        "category": "smartwatch",
+        "brand": "Samsung",
+        "colors": [
+            "Mystic Black",
+            "Mystic Silver",
+            "Mystic Bronze"
+        ],
+        "price": 449,
+        "sizeScreen": 1.6,
+        "ram": 2,
+        "storage": 32,
+        "image": "https://technave.com/data/files/article/202407110019428011.jpg"
+    },
+    {
+        "id": 21,
+        "createdAt": "2025-09-04T10:12:00.000Z",
+        "updatedAt": "2025-09-04T10:12:00.000Z",
+        "title": "Garmin Fenix 8",
+        "category": "smartwatch",
+        "brand": "Garmin",
+        "colors": [
+            "Black DLC",
+            "Titanium Gray"
+        ],
+        "price": 799,
+        "sizeScreen": 1.4,
+        "ram": 1,
+        "storage": 16,
+        "image": "https://m.media-amazon.com/images/I/71p75rAKWML._UF1000,1000_QL80_.jpg"
+    },
+    {
+        "id": 22,
+        "createdAt": "2025-09-04T10:13:00.000Z",
+        "updatedAt": "2025-09-04T10:13:00.000Z",
+        "title": "Fitbit Versa 4",
+        "category": "smartwatch",
+        "brand": "Fitbit",
+        "colors": [
+            "Black",
+            "Sage",
+            "Clay"
+        ],
+        "price": 229,
+        "sizeScreen": 1.58,
+        "ram": 1,
+        "storage": 4,
+        "image": "https://m.media-amazon.com/images/I/61tXAlKzJaL._UF1000,1000_QL80_.jpg"
+    },
+    {
+        "id": 23,
+        "createdAt": "2025-09-04T10:15:00.000Z",
+        "updatedAt": "2025-09-04T10:15:00.000Z",
+        "title": "Microsoft Surface Pro 10",
+        "category": "tablet",
+        "brand": "Microsoft",
+        "colors": [
+            "Platinum",
+            "Graphite"
+        ],
+        "price": 1099,
+        "sizeScreen": 13.0,
+        "ram": 16,
+        "storage": 256,
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQh0dD98tu-tYCuyJbR2-aQVu0gflRxhQqzOA&s"
+    },
+    {
+        "id": 24,
+        "createdAt": "2025-09-04T10:16:00.000Z",
+        "updatedAt": "2025-09-04T10:16:00.000Z",
+        "title": "Samsung Galaxy Tab S10 FE",
+        "category": "tablet",
+        "brand": "Samsung",
+        "colors": [
+            "Graphite",
+            "Copper Mist",
+            "Mustard"
+        ],
+        "price": 649,
+        "sizeScreen": 11.0,
+        "ram": 8,
+        "storage": 128,
+        "image": "https://images.samsung.com/is/image/samsung/p6pim/it/feature/others/it-feature-galaxy-tab-s10-fe-sm-x526-545815477?$FB_TYPE_A_MO_JPG$"
+    },
+    {
+        "id": 25,
+        "createdAt": "2025-09-04T10:17:00.000Z",
+        "updatedAt": "2025-09-04T10:17:00.000Z",
+        "title": "Lenovo Tab P13 Pro",
+        "category": "tablet",
+        "brand": "Lenovo",
+        "colors": [
+            "Storm Grey"
+        ],
+        "price": 799,
+        "sizeScreen": 13.3,
+        "ram": 8,
+        "storage": 256,
+        "image": "https://p3-ofp.static.pub//fes/cms/2024/11/25/6x8cb1xfxhikh37gmnsuer6hy4whoj505117.jpg"
+    },
+    {
+        "id": 26,
+        "createdAt": "2025-09-04T10:18:00.000Z",
+        "updatedAt": "2025-09-04T10:18:00.000Z",
+        "title": "Xiaomi Pad Max",
+        "category": "tablet",
+        "brand": "Xiaomi",
+        "colors": [
+            "Deep Blue",
+            "Stone Gray"
+        ],
+        "price": 549,
+        "sizeScreen": 12.8,
+        "ram": 8,
+        "storage": 256,
+        "image": "https://immagini.trovaprezzi.it/magazine/2025/03/Xiaomi-Pad-7-Max-render.jpg"
+    },
+    {
+        "id": 27,
+        "createdAt": "2025-09-04T10:19:00.000Z",
+        "updatedAt": "2025-09-04T10:19:00.000Z",
+        "title": "Amazon Fire Max 11",
+        "category": "tablet",
+        "brand": "Amazon",
+        "colors": [
+            "Black",
+            "Slate"
+        ],
+        "price": 229,
+        "sizeScreen": 11.0,
+        "ram": 6,
+        "storage": 128,
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSH59EaUHTF9h5KbALFToy8YJTt2TQEWh79bg&s"
+    },
+    {
+        "id": 28,
+        "createdAt": "2025-09-04T10:20:00.000Z",
+        "updatedAt": "2025-09-04T10:20:00.000Z",
+        "title": "Apple Watch SE (2nd Generation)",
+        "category": "smartwatch",
+        "brand": "Apple",
+        "colors": [
+            "Midnight",
+            "Starlight",
+            "Silver"
+        ],
+        "price": 199,
+        "sizeScreen": 1.78,
+        "ram": 1,
+        "storage": 32,
+        "image": "https://techcrunch.com/wp-content/uploads/2022/09/apple-watch-se-2.jpeg"
+    },
+    {
+        "id": 29,
+        "createdAt": "2025-09-04T10:21:00.000Z",
+        "updatedAt": "2025-09-04T10:21:00.000Z",
+        "title": "Samsung Galaxy Watch Ultra",
+        "category": "smartwatch",
+        "brand": "Samsung",
+        "colors": [
+            "Titanium Black",
+            "Titanium Silver"
+        ],
+        "price": 599,
+        "sizeScreen": 1.7,
+        "ram": 2,
+        "storage": 32,
+        "image": "https://m.media-amazon.com/images/I/7123XHigKML.jpg"
+    },
+    {
+        "id": 30,
+        "createdAt": "2025-09-04T10:22:00.000Z",
+        "updatedAt": "2025-09-04T10:22:00.000Z",
+        "title": "Google Pixel Watch 3",
+        "category": "smartwatch",
+        "brand": "Google",
+        "colors": [
+            "Chalk",
+            "Obsidian",
+            "Hazel"
+        ],
+        "price": 349,
+        "sizeScreen": 1.5,
+        "ram": 2,
+        "storage": 32,
+        "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Charging.max-1080x1080.format-webp.webp"
+    },
+    {
+        "id": 31,
+        "createdAt": "2025-09-04T10:23:00.000Z",
+        "updatedAt": "2025-09-04T10:23:00.000Z",
+        "title": "Amazfit Active 2",
+        "category": "smartwatch",
+        "brand": "Amazfit",
+        "colors": [
+            "Black",
+            "Rose Gold",
+            "Blue"
+        ],
+        "price": 149,
+        "sizeScreen": 1.39,
+        "ram": 1,
+        "storage": 4,
+        "image": "https://it.amazfit.com/cdn/shop/files/Active_2-Black-1_5a76c796-40d7-4c1d-8251-a042ca8d9a6c.png?v=1740567587"
+    },
+    {
+        "id": 32,
+        "createdAt": "2025-09-04T10:24:00.000Z",
+        "updatedAt": "2025-09-04T10:24:00.000Z",
+        "title": "Samsung Galaxy Tab S11",
+        "category": "tablet",
+        "brand": "Samsung",
+        "colors": [
+            "Graphite",
+            "Silver"
+        ],
+        "price": 799,
+        "sizeScreen": 11.0,
+        "ram": 8,
+        "storage": 256,
+        "image": "https://images.samsung.com/is/image/samsung/p6pim/it/feature/166535893/it-feature--nbsp-548964411?$FB_TYPE_I_JPG$"
+    },
+    {
+        "id": 33,
+        "createdAt": "2025-09-04T10:25:00.000Z",
+        "updatedAt": "2025-09-04T10:25:00.000Z",
+        "title": "Samsung Galaxy Tab S11 Ultra",
+        "category": "tablet",
+        "brand": "Samsung",
+        "colors": [
+            "Graphite",
+            "Silver"
+        ],
+        "price": 1199,
+        "sizeScreen": 14.6,
+        "ram": 12,
+        "storage": 512,
+        "image": "https://images.samsung.com/is/image/samsung/p6pim/it/feature/166535074/it-feature--nbsp-548961847?$FB_TYPE_I_JPG$"
+    },
+    {
+        "id": 34,
+        "createdAt": "2025-09-04T10:26:00.000Z",
+        "updatedAt": "2025-09-04T10:26:00.000Z",
+        "title": "Lenovo Yoga Tab Plus",
+        "category": "tablet",
+        "brand": "Lenovo",
+        "colors": [
+            "Dark Gray"
+        ],
+        "price": 539,
+        "sizeScreen": 12.7,
+        "ram": 16,
+        "storage": 256,
+        "image": "https://m.media-amazon.com/images/I/61+zR4DN9WL.jpg"
+    },
+    {
+        "id": 35,
+        "createdAt": "2025-09-04T10:27:00.000Z",
+        "updatedAt": "2025-09-04T10:27:00.000Z",
+        "title": "Huawei MatePad Pro 12.2 (2025)",
+        "category": "tablet",
+        "brand": "Huawei",
+        "colors": [
+            "Space Gray"
+        ],
+        "price": 849,
+        "sizeScreen": 12.2,
+        "ram": 12,
+        "storage": 512,
+        "image": "https://consumer.huawei.com/dam/content/dam/huawei-cbg-site/common/mkt/pdp/tablets/matepad-pro-12-2-2025/images/reasons/huawei-matepad-pro-12-2-inch-screen.jpg"
+    },
+    {
+        "id": 36,
+        "createdAt": "2025-09-10T12:00:00.000Z",
+        "updatedAt": "2025-09-10T12:00:00.000Z",
+        "title": "iPhone 17",
+        "category": "smartphone",
+        "brand": "Apple",
+        "colors": [
+            "midnight",
+            "starlight",
+            "blue",
+            "pink",
+            "yellow"
+        ],
+        "price": 899,
+        "sizeScreen": 6.1,
+        "ram": 6,
+        "storage": 128,
+        "image": "https://www.apple.com/v/iphone-17/a/images/overview/welcome/hero_startframe__fslo8k8lane6_xlarge.jpg"
+    },
+    {
+        "id": 37,
+        "createdAt": "2025-09-10T12:00:00.000Z",
+        "updatedAt": "2025-09-10T12:00:00.000Z",
+        "title": "iPhone 17 Pro",
+        "category": "smartphone",
+        "brand": "Apple",
+        "colors": [
+            "natural titanium",
+            "black titanium",
+            "blue titanium",
+            "white titanium"
+        ],
+        "price": 1199,
+        "sizeScreen": 6.3,
+        "ram": 8,
+        "storage": 256,
+        "image": "https://images.macrumors.com/t/UDyL8vJo9SZGNLUyL5bgRD2vtmA=/1600x0/article-new/2025/07/iPhone-17-Pro-Dark-Blue-and-Orange.jpg"
+    },
+    {
+        "id": 38,
+        "createdAt": "2025-09-10T12:00:00.000Z",
+        "updatedAt": "2025-09-10T12:00:00.000Z",
+        "title": "iPhone 17 Pro Max",
+        "category": "smartphone",
+        "brand": "Apple",
+        "colors": [
+            "natural titanium",
+            "black titanium",
+            "blue titanium",
+            "white titanium"
+        ],
+        "price": 1499,
+        "sizeScreen": 6.9,
+        "ram": 8,
+        "storage": 512,
+        "image": "https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/iphone-17-pro-finish-select-202509-6-9inch-cosmicorange?wid=5120&hei=2880&fmt=p-jpg&qlt=80&.v=NUNzdzNKR0FJbmhKWm5YamRHb05tUzkyK3hWak1ybHhtWDkwUXVINFc0RnVrUzFnTVVSUnNLVnZUWUMxNTBGaGhsQTdPYWVGbmdIenAvNE9qYmZVYWVRU0p3cnVrZzhmdWQwTDVYRlMxUFpybkIybk5RZmlyRnNkQjBrajdkK0x3OTBRTml3ekFaalZVdHhxNE5XT3dn&traceId=1"
+    },
+    {
+        "id": 39,
+        "createdAt": "2025-09-10T12:00:00.000Z",
+        "updatedAt": "2025-09-10T12:00:00.000Z",
+        "title": "Galaxy S23",
+        "category": "smartphone",
+        "brand": "Samsung",
+        "colors": [
+            "Phantom Black",
+            "Cream",
+            "Lavender",
+            "Green"
+        ],
+        "price": 799,
+        "sizeScreen": 6.1,
+        "ram": 8,
+        "storage": 128,
+        "image": "https://images.samsung.com/is/image/samsung/assets/it/smartphones/galaxy-s23/images/galaxy-s23-highlights-kv.jpg"
+    },
+    {
+        "id": 40,
+        "createdAt": "2025-09-10T12:00:00.000Z",
+        "updatedAt": "2025-09-10T12:00:00.000Z",
+        "title": "Galaxy S23+",
+        "category": "smartphone",
+        "brand": "Samsung",
+        "colors": [
+            "Phantom Black",
+            "Cream",
+            "Lavender",
+            "Green"
+        ],
+        "price": 999,
+        "sizeScreen": 6.6,
+        "ram": 8,
+        "storage": 256,
+        "image": "https://shopee.com.my/blog/wp-content/uploads/2023/02/192.jpg"
+    },
+    {
+        "id": 41,
+        "createdAt": "2025-09-10T12:00:00.000Z",
+        "updatedAt": "2025-09-10T12:00:00.000Z",
+        "title": "Galaxy S23 Ultra",
+        "category": "smartphone",
+        "brand": "Samsung",
+        "colors": [
+            "Phantom Black",
+            "Cream",
+            "Green",
+            "Lavender"
+        ],
+        "price": 1349,
+        "sizeScreen": 6.8,
+        "ram": 12,
+        "storage": 512,
+        "image": "https://cdn.idealo.com/folder/Product/202277/8/202277822/s10_produktbild_gross_24/samsung-galaxy-s23-ultra.jpg"
+    }
+]

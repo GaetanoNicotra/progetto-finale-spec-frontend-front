@@ -29,7 +29,7 @@ const Header = () => {
                     <Link to={'/scooters'} className='me-4 fs-2 no-decoration'>🛴</Link>
 
                     <Link to="/favorites" className="position-relative text-white text-decoration-none ms-3">
-                        <i className="fa-solid text-warning fs-2"><p>⭐</p></i>
+                        <i className="fa-solid text-warning fs-2"><p className='pt-2'>⭐</p></i>
                         {favoritiesIds.length > 0 && (
                             <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                                 {favoritiesIds.length}

@@ -55,7 +55,7 @@ const ProductsDetail = () => {
                                     <button
                                         className={`btn ${compareIds.includes(product.device.id) ? 'btn-danger' : 'btn-primary'} `}
                                         onClick={() => toggleCompare(product.device.id)}>
-                                        {compareIds.includes(product.device.id) ? <div className='d-flex align-items-center'>Rimuovi<i class="fa-solid fa-scale-unbalanced-flip ms-2"></i></div> : <div className='d-flex align-items-center'>Aggiungi<i class="fa-solid fa-scale-unbalanced-flip ms-2"></i></div>}</button>
+                                        {compareIds.includes(product.device.id) ? <div className='d-flex align-items-center'>Rimuovi<i className="fa-solid fa-scale-unbalanced-flip ms-2"></i></div> : <div className='d-flex align-items-center'>Aggiungi<i className="fa-solid fa-scale-unbalanced-flip ms-2"></i></div>}</button>
 
                                     <button className={`btn ${favoritiesIds.includes(product.device.id) ? 'btn-danger' : 'btn-warning'}`}
                                         onClick={() => toggleFavorities(product.device.id)}>

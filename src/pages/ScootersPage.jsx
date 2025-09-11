@@ -16,10 +16,7 @@ const ProductsCards = () => {
     const [searchGenre, setSearchGenre] = useState('')
 
     // variabile di stato per ordinamento A-Z Z-A
-    const [order, setOrder] = useState('A-Z')
-
-    // destrutturazione del custom hook per il comparatore
-    const { compareIds, toggleCompare } = useCompare();
+    const [order, setOrder] = useState('A-Z');
 
     // destrutturazione del custom hook per i preferiti
     const { favoritiesIds, toggleFavorities } = useFavorites();
@@ -78,8 +75,11 @@ const ProductsCards = () => {
     return (
         <>
             <div className="container">
+
                 <div className="row">
+                    <img src="https://assets.segway-cdn.com/Homepage-Pictures/_fullPageLarge/150493/Slide_MAX-G3_no-1_without-segway.jpg" alt="" />
                     <div className='d-flex operation mb-4 mt-4 p-2'>
+
                         <div className='me-5'>
                             <p>Cerca prodotti</p>
                             <input type="text"
@@ -97,16 +97,6 @@ const ProductsCards = () => {
                                 <option value="Z-A">Z-A</option>
                             </select>
                         </div>
-
-                        {/* <div>
-                            <p>Ordina per Categoria</p>
-                            <select value={searchGenre} onChange={(e) => setSearchGenre(e.target.value)} >
-                                <option value="">Tutti</option>
-                                <option value="smartphone">Smartphone</option>
-                                <option value="tablet">Tablet</option>
-                                <option value="smartwatch">Smartwatch</option>
-                            </select>
-                        </div> */}
                     </div>
 
                     {orderedProducts.length === 0 ? <div className='text-white fs-2 mt-3'>Nessun risultato trovato..</div>
@@ -118,18 +108,9 @@ const ProductsCards = () => {
                                             <h5>{p.title}</h5>
                                             <p className='fs-6'>{p.category} 🛴</p>
                                         </Link>
-
-                                        <div className='d-flex justify-content-around'>
-                                            <button
-                                                className={`btn ${compareIds.includes(p.id) ? 'btn-outline-danger' : 'btn-outline-primary'} `}
-                                                onClick={() => toggleCompare(p.id)}>
-                                                {compareIds.includes(p.id) ? 'Rimuovi' : <i className="fa-solid fa-scale-unbalanced-flip"></i>}</button>
-
-                                            <button className={`btn ${favoritiesIds.includes(p.id) ? 'btn-danger' : 'btn-outline-warning'}`}
-                                                onClick={() => toggleFavorities(p.id)}>
-                                                {favoritiesIds.includes(p.id) ? <i className="fa-solid fa-star text-warning"></i>
-                                                    : <i className="fa-regular fa-star text-warning" ></i>}</button>
-                                        </div>
+                                        <Link to={`/scooters/${p.id}`} className="no-decoration">
+                                            <button className=' btn btn-outline-primary w-50'>Vai al dettaglio</button>
+                                        </Link>
                                     </div>
                                 </div>
                             )

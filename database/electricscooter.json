@@ -1,0 +1,399 @@
+[
+    {
+        "id": 42,
+        "createdAt": "2025-09-04T10:00:00.000Z",
+        "updatedAt": "2025-09-04T10:00:00.000Z",
+        "title": "Mi Electric Scooter Pro 2",
+        "category": "electric-scooter",
+        "price": 549,
+        "brand": "Xiaomi",
+        "colors": [
+            "black",
+            "white"
+        ],
+        "image": "https://www.mistoreitalia.com/cdn/shop/products/26354_7_0f8365fc-b144-42b2-bf76-9e6d18e96041.jpg?v=1623166523&width=800",
+        "speed": 25,
+        "batteryPower": 474
+    },
+    {
+        "id": 43,
+        "createdAt": "2025-09-04T10:00:00.000Z",
+        "updatedAt": "2025-09-04T10:00:00.000Z",
+        "title": "Ninebot MAX G30",
+        "category": "electric-scooter",
+        "price": 799,
+        "brand": "Segway",
+        "colors": [
+            "black"
+        ],
+        "image": "https://assets.segway-cdn.com/Product-Pages/KickScooters/KickScooter-MAX-G30LD/_hero_full/21919/MAX-G30LD_MAX-picture.jpg",
+        "speed": 30,
+        "batteryPower": 551
+    },
+    {
+        "id": 44,
+        "createdAt": "2025-09-04T10:00:00.000Z",
+        "updatedAt": "2025-09-04T10:00:00.000Z",
+        "title": "Razor E300",
+        "category": "electric-scooter",
+        "price": 349,
+        "brand": "Razor",
+        "colors": [
+            "black",
+            "blue"
+        ],
+        "image": "https://www.tradeinn.com/f/13781/137815580/razor-monopattino-elettrico-e300-seat.webp",
+        "speed": 24,
+        "batteryPower": 250
+    },
+    {
+        "id": 45,
+        "createdAt": "2025-09-04T10:00:00.000Z",
+        "updatedAt": "2025-09-04T10:00:00.000Z",
+        "title": "Unagi Model One E500",
+        "category": "electric-scooter",
+        "price": 990,
+        "brand": "Unagi",
+        "colors": [
+            "matte black",
+            "cloud white"
+        ],
+        "image": "https://scooter.guide/wp-content/uploads/2021/05/unagi-model-one-e-500-electric-scooter-footer-image-1024x683.jpg",
+        "speed": 25,
+        "batteryPower": 240
+    },
+    {
+        "id": 46,
+        "createdAt": "2025-09-04T10:00:00.000Z",
+        "updatedAt": "2025-09-04T10:00:00.000Z",
+        "title": "Apollo City",
+        "category": "electric-scooter",
+        "price": 1299,
+        "brand": "Apollo",
+        "colors": [
+            "black",
+            "red"
+        ],
+        "image": "https://media.wired.com/photos/623a1b8db1c15e50702785a2/master/w_2560%2Cc_limit/Apollo-City-hero-SOURCE-Apollo-Gear.jpg",
+        "speed": 40,
+        "batteryPower": 540
+    },
+    {
+        "id": 47,
+        "createdAt": "2025-09-04T10:00:00.000Z",
+        "updatedAt": "2025-09-04T10:00:00.000Z",
+        "title": "Glion Dolly",
+        "category": "electric-scooter",
+        "price": 599,
+        "brand": "Glion",
+        "colors": [
+            "black",
+            "silver"
+        ],
+        "image": "https://factorypure.com/cdn/shop/products/311HBrUJupL._SX425_1024x1024_d08f4cb0-0bff-4a8e-81fa-8f378bc49ab6.png?v=1612236966&width=400",
+        "speed": 24,
+        "batteryPower": 260
+    },
+    {
+        "id": 48,
+        "createdAt": "2025-09-04T10:00:00.000Z",
+        "updatedAt": "2025-09-04T10:00:00.000Z",
+        "title": "Boosted Rev",
+        "category": "electric-scooter",
+        "price": 1599,
+        "brand": "Boosted",
+        "colors": [
+            "black"
+        ],
+        "image": "https://media.wired.com/photos/5d24faf593cdbb000839c0eb/1:1/w_1061,h_1061,c_limit/Gear-Boosted-Rev.jpg",
+        "speed": 39,
+        "batteryPower": 480
+    },
+    {
+        "id": 49,
+        "createdAt": "2025-09-04T10:00:00.000Z",
+        "updatedAt": "2025-09-04T10:00:00.000Z",
+        "title": "Inokim Light 2",
+        "category": "electric-scooter",
+        "price": 1399,
+        "brand": "Inokim",
+        "colors": [
+            "black",
+            "white",
+            "blue"
+        ],
+        "image": "https://www.maxblinker.it/135-panda_big_default/inokim-light-2.jpg",
+        "speed": 25,
+        "batteryPower": 324
+    },
+    {
+        "id": 50,
+        "createdAt": "2025-09-04T10:00:00.000Z",
+        "updatedAt": "2025-09-04T10:00:00.000Z",
+        "title": "WideWheel Pro",
+        "category": "electric-scooter",
+        "price": 1499,
+        "brand": "Mercane",
+        "colors": [
+            "black",
+            "red"
+        ],
+        "image": "https://www.pedl.com.au/cdn/shop/products/pro_720x_7a78fba5-e46e-4d07-8a12-85b8863584d1_grande.jpg?v=1646645921",
+        "speed": 40,
+        "batteryPower": 540
+    },
+    {
+        "id": 51,
+        "createdAt": "2025-09-04T10:00:00.000Z",
+        "updatedAt": "2025-09-04T10:00:00.000Z",
+        "title": "Mantis 8",
+        "category": "electric-scooter",
+        "price": 1199,
+        "brand": "Kaabo",
+        "colors": [
+            "black",
+            "orange"
+        ],
+        "image": "https://www.kaabo.com/wp-content/uploads/2023/05/Kaabo-Mantis-8-1.jpg",
+        "speed": 40,
+        "batteryPower": 720
+    },
+    {
+        "id": 52,
+        "createdAt": "2025-09-10T12:00:00.000Z",
+        "updatedAt": "2025-09-10T12:00:00.000Z",
+        "title": "Ultraviolette Tesseract",
+        "category": "electric-scooter",
+        "price": 1999,
+        "brand": "Ultraviolette",
+        "colors": [
+            "Stealth Black",
+            "Solar White",
+            "Sonic Pink",
+            "Desert Sand"
+        ],
+        "image": "https://www.ultraviolette.com/_next/image?url=https%3A%2F%2Fd2atk76x06g5eh.cloudfront.net%2Fmarch_launch%2Ftesseract%2Fpersonality%2Fpersonality1-mob-l.png&w=3840&q=75",
+        "speed": 125,
+        "batteryPower": 350
+    },
+    {
+        "id": 53,
+        "createdAt": "2025-09-10T12:00:00.000Z",
+        "updatedAt": "2025-09-10T12:00:00.000Z",
+        "title": "TurboAnt X7 Pro",
+        "category": "electric-scooter",
+        "price": 549,
+        "brand": "TurboAnt",
+        "colors": [
+            "black",
+            "white"
+        ],
+        "image": "https://electricbikereport.com/wp-content/uploads/2020/10/TurboAnt-Scooter-Thumbnail-2-min.jpg",
+        "speed": 32,
+        "batteryPower": 365
+    },
+    {
+        "id": 54,
+        "createdAt": "2025-09-10T12:00:00.000Z",
+        "updatedAt": "2025-09-10T12:00:00.000Z",
+        "title": "Ninebot MAX G3 I",
+        "category": "electric-scooter",
+        "price": 1399,
+        "brand": "Segway",
+        "colors": [
+            "black",
+            "red"
+        ],
+        "image": "https://assets.segway-cdn.com/customproductpages/max-g3-block-3-5.png",
+        "speed": 30,
+        "batteryPower": 597
+    },
+    {
+        "id": 55,
+        "createdAt": "2025-09-10T12:00:00.000Z",
+        "updatedAt": "2025-09-10T12:00:00.000Z",
+        "title": "Apollo City Pro",
+        "category": "electric-scooter",
+        "price": 1099,
+        "brand": "Apollo",
+        "colors": [
+            "black",
+            "silver"
+        ],
+        "image": "https://repairandrun.ca/cdn/shop/files/CityPro-new2024.webp?v=1726624850&width=1214",
+        "speed": 35,
+        "batteryPower": 600
+    },
+    {
+        "id": 56,
+        "createdAt": "2025-09-10T12:00:00.000Z",
+        "updatedAt": "2025-09-10T12:00:00.000Z",
+        "title": "RoadRunner RS5 MAX",
+        "category": "electric-scooter",
+        "price": 2199,
+        "brand": "RoadRunner",
+        "colors": [
+            "black",
+            "white"
+        ],
+        "image": "https://roadrunnerscooters.com/cdn/shop/files/RS5-BLU_535x.jpg?v=1753298133",
+        "speed": 74,
+        "batteryPower": 1600
+    },
+    {
+        "id": 57,
+        "createdAt": "2025-09-10T12:00:00.000Z",
+        "updatedAt": "2025-09-10T12:00:00.000Z",
+        "title": "Inmotion RS",
+        "category": "electric-scooter",
+        "price": 3595,
+        "brand": "Inmotion",
+        "colors": [
+            "black"
+        ],
+        "image": "https://inmotion-store.com/wp-content/uploads/2023/03/INMOTION-RS-ELECTRIC-SCOOTER-20.jpg",
+        "speed": 100,
+        "batteryPower": 2880
+    },
+    {
+        "id": 58,
+        "createdAt": "2025-09-10T12:00:00.000Z",
+        "updatedAt": "2025-09-10T12:00:00.000Z",
+        "title": "Bajaj Chetak 3001",
+        "category": "electric-scooter",
+        "price": 1200,
+        "brand": "Bajaj",
+        "colors": [
+            "blue",
+            "red"
+        ],
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEzuRvFXzrIp94CRsBUQkqDGL8Fj23r5cWyQ&s",
+        "speed": 70,
+        "batteryPower": 3000
+    },
+    {
+        "id": 59,
+        "createdAt": "2025-09-10T12:00:00.000Z",
+        "updatedAt": "2025-09-10T12:00:00.000Z",
+        "title": "Ather Rizta Z",
+        "category": "electric-scooter",
+        "price": 1400,
+        "brand": "Ather",
+        "colors": [
+            "white",
+            "black"
+        ],
+        "image": "https://imgd.aeplcdn.com/1280x720/n/cw/ec/168965/rizta-right-front-three-quarter.jpeg?isig=0",
+        "speed": 80,
+        "batteryPower": 3500
+    },
+    {
+        "id": 60,
+        "createdAt": "2025-09-10T12:00:00.000Z",
+        "updatedAt": "2025-09-10T12:00:00.000Z",
+        "title": "Ola S1 Z Plus",
+        "category": "electric-scooter",
+        "price": 650,
+        "brand": "Ola Electric",
+        "colors": [
+            "white",
+            "green"
+        ],
+        "image": "https://cdn.bikedekho.com/processedimages/ola-electric/s1-z/source/s1-z6745bf5b557a3.jpg",
+        "speed": 90,
+        "batteryPower": 4000
+    },
+    {
+        "id": 61,
+        "createdAt": "2025-09-10T12:00:00.000Z",
+        "updatedAt": "2025-09-10T12:00:00.000Z",
+        "title": "NIU KQi Air",
+        "category": "electric-scooter",
+        "price": 699,
+        "brand": "NIU",
+        "colors": [
+            "black"
+        ],
+        "image": "https://global.niu.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fcd9iwvgl%2Fproduction%2Fe986f15078f5e0eca40cdb80ed9c49afb26c62c0-844x1125.jpg&w=3840&q=75",
+        "speed": 32,
+        "batteryPower": 451.2
+    },
+    {
+        "id": 62,
+        "createdAt": "2025-09-10T12:00:00.000Z",
+        "updatedAt": "2025-09-10T12:00:00.000Z",
+        "title": "Segway Ninebot Kickscooter Max G3",
+        "category": "electric-scooter",
+        "price": 1299,
+        "brand": "Segway",
+        "colors": [
+            "black"
+        ],
+        "image": "https://cdn.skatepro.com/product/520/ninebot-by-segway-es2-kickscooter-rh.webp",
+        "speed": 45,
+        "batteryPower": 1150
+    },
+    {
+        "id": 63,
+        "createdAt": "2025-09-10T12:00:00.000Z",
+        "updatedAt": "2025-09-10T12:00:00.000Z",
+        "title": "TurboAnt M10",
+        "category": "electric-scooter",
+        "price": 399,
+        "brand": "TurboAnt",
+        "colors": [
+            "black"
+        ],
+        "image": "https://turboant.com/cdn/shop/products/M10-Lite-_18.jpg?crop=center&height=1680&v=1752476072&width=1680",
+        "speed": 32,
+        "batteryPower": 360
+    },
+    {
+        "id": 64,
+        "createdAt": "2025-09-10T12:00:00.000Z",
+        "updatedAt": "2025-09-10T12:00:00.000Z",
+        "title": "Pure Advance Flex",
+        "category": "electric-scooter",
+        "price": 799,
+        "brand": "Pure",
+        "colors": [
+            "black",
+            "grey"
+        ],
+        "image": "https://bici-shop.it/1963-large_default/pure-advance-flex-electric-scooter.jpg",
+        "speed": 25,
+        "batteryPower": 400
+    },
+    {
+        "id": 65,
+        "createdAt": "2025-09-10T12:00:00.000Z",
+        "updatedAt": "2025-09-10T12:00:00.000Z",
+        "title": "Alext",
+        "category": "electric-scooter",
+        "price": 599,
+        "brand": "Lamborghini",
+        "colors": [
+            "black",
+            "blue"
+        ],
+        "image": "https://www.emuoviti.it/5337-large_default/lamborghini-al2-monopattino-elettrico-vers2023.jpg",
+        "speed": 25,
+        "batteryPower": 477
+    },
+    {
+        "id": 66,
+        "createdAt": "2025-09-10T12:00:00.000Z",
+        "updatedAt": "2025-09-10T12:00:00.000Z",
+        "title": "Scrambler",
+        "category": "electric-scooter",
+        "price": 1400,
+        "brand": "Ducati",
+        "colors": [
+            "white",
+            "black"
+        ],
+        "image": "https://m.media-amazon.com/images/I/51rXOBgi0rL._UF1000,1000_QL80_.jpg",
+        "speed": 80,
+        "batteryPower": 3500
+    }
+]

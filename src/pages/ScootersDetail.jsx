@@ -12,9 +12,6 @@ const ScootersDetail = () => {
     // variabile di stato per contenere i products
     const [product, setProduct] = useState(null);
 
-    // destrutturazione del custom hook per il comparatore
-    const { compareIds, toggleCompare } = useCompare();
-
     // destrutturazione del custom hook per i preferiti
     const { favoritiesIds, toggleFavorities } = useFavorites();
 
@@ -53,17 +50,7 @@ const ScootersDetail = () => {
                                 <div className="card-body">
                                     <h4 className="card-title mt-4">{product.electricscooter.title}</h4>
                                 </div>
-                                <div className='d-flex justify-content-between mt-3'>
-                                    <button
-                                        className={`btn ${compareIds.includes(product.electricscooter.id) ? 'btn-danger' : 'btn-primary'} `}
-                                        onClick={() => toggleCompare(product.electricscooter.id)}>
-                                        {compareIds.includes(product.electricscooter.id) ? <div className='d-flex align-items-center'>Rimuovi<i className="fa-solid fa-scale-unbalanced-flip ms-2"></i></div> : <div className='d-flex align-items-center'>Aggiungi<i className="fa-solid fa-scale-unbalanced-flip ms-2"></i></div>}</button>
 
-                                    <button className={`btn ${favoritiesIds.includes(product.electricscooter.id) ? 'btn-danger' : 'btn-warning'}`}
-                                        onClick={() => toggleFavorities(product.electricscooter.id)}>
-                                        {favoritiesIds.includes(product.electricscooter.id) ? <i className="fa-solid fa-star text-warning"></i>
-                                            : <i className="fa-regular fa-star text-white" ></i>}</button>
-                                </div>
                             </div>
                         </div>
 
