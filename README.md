@@ -1,12 +1,60 @@
-# React + Vite
+# 🎧 TechnoShop
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**TechnoShop** è una Single Page Application (SPA) sviluppata in **React** con **Vite**, che consente agli utenti non autenticati di esplorare, confrontare e salvare dispositivi tecnologici preferiti.
 
-Currently, two official plugins are available:
+L'app permette di sfogliare categorie come **smartphone**, **tablet**, **smartwatch** e **monopattini elettrici**, offrendo un'esperienza moderna, responsive e user-friendly.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🚀 Funzionalità principali
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- 🔍 **Ricerca in tempo reale** con debounce per migliorare la UX
+- 🎯 **Filtro** per categoria (es. smartphone, tablet, ecc.)
+- 🔃 **Ordinamento** per `title` o `category` (A-Z e Z-A)
+- 📄 **Pagina di dettaglio** con tutte le informazioni (`price`, `description`, `brand`, ecc.)
+- 📊 **Comparatore** responsive per confrontare **2 o più dispositivi**
+- ⭐ **Sistema di preferiti**, accessibile da ogni sezione
+- 📭 **Gestione degli stati vuoti**:
+  - Nessun risultato trovato
+  - Lista preferiti vuota
+  - Nessun elemento selezionato nel comparatore
+
+---
+
+## 🧑‍💻 Tecnologie utilizzate
+
+- ⚛️ **React**
+- ⚡ **Vite**
+- 🌐 **React Router DOM**
+- 📦 **Lodash** (per il debounce)
+- 🧠 **Context API** per stato globale
+- 🧾 **TypeScript** (tipi definiti in `types.ts`)
+
+---
+
+## 🎨 Stile & UI
+
+- 🎨 **Bootstrap** via CDN
+- 🔤 Font Google: **Roboto** e **Manrope**
+- ⭐ **Font Awesome** per le icone
+- 🧩 Favicon personalizzata
+
+> L’interfaccia è completamente responsive e ottimizzata per desktop, tablet e mobile.
+
+---
+
+## 🗂️ Struttura delle pagine
+
+| Percorso                 | Componente               | Descrizione                                  |
+|--------------------------|--------------------------|----------------------------------------------|
+| `/`                      | `ProductsList`           | Lista dei dispositivi                        |
+| `/product/:id`           | `ProductsDetail`         | Dettaglio prodotto                           |
+| `/confrontaPrezzi`       | `ComparisonPage`         | Comparatore di 2 o più dispositivi           |
+| `/favorites`             | `Favorites`              | Prodotti salvati nei preferiti               |
+| `/scooters`              | `ScootersPage`           | Lista monopattini elettrici                  |
+| `/scooters/:id`          | `ScootersDetail`         | Dettaglio monopattino                        |
+| `*`                      | `NotFoundPage`           | Pagina non trovata                           |
+
+---
+
+
