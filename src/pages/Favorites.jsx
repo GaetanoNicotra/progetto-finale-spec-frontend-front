@@ -64,8 +64,20 @@ const Favorites = () => {
                                     </div>
                                     <p className="card-text mt-2 price w-50 mt-auto">{p.device.price} &#8364;</p>
                                 </div>
-
                             </Link>
+
+                            <div className='d-flex justify-content-around'>
+                                <button
+                                    className={`btn ${compareIds.includes(p.device.id) ? 'btn-danger' : 'btn-primary'} mt-2 `}
+                                    onClick={() => toggleCompare(p.device.id)}>
+                                    {compareIds.includes(p.device.id) ? <i className="fa-solid fa-scale-unbalanced-flip"></i> : <i className="fa-solid fa-scale-unbalanced-flip"></i>
+                                    }</button>
+                                <button
+                                    className='btn btn-danger mt-2'
+                                    onClick={() => toggleFavorities(p.device.id)}>
+                                    Rimuovi</button>
+                            </div>
+
                         </div>
                     ))}
                 </div>

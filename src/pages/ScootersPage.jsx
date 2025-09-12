@@ -1,7 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { Link } from 'react-router-dom';
-import { useCompare } from '../context/CompareContext';
-import { useFavorites } from '../context/FavoritesContext';
 import { debounce } from 'lodash';
 
 const ProductsCards = () => {
@@ -17,9 +15,6 @@ const ProductsCards = () => {
 
     // variabile di stato per ordinamento A-Z Z-A
     const [order, setOrder] = useState('A-Z');
-
-    // destrutturazione del custom hook per i preferiti
-    const { favoritiesIds, toggleFavorities } = useFavorites();
 
     // Stato per input di ricerca titolo (debounced)
     const [searchInput, setSearchInput] = useState('');

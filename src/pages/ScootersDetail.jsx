@@ -1,8 +1,6 @@
 import React from 'react'
 import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import { useCompare } from '../context/CompareContext';
-import { useFavorites } from '../context/FavoritesContext';
 
 const ScootersDetail = () => {
 
@@ -14,9 +12,6 @@ const ScootersDetail = () => {
 
     // variabile di stato per contenere i products
     const [product, setProduct] = useState(null);
-
-    // destrutturazione del custom hook per i preferiti
-    const { favoritiesIds, toggleFavorities } = useFavorites();
 
     //  funzione per recuperare i singoli prodotti
     useEffect(() => {

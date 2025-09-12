@@ -106,7 +106,7 @@ const ProductsCards = () => {
                 </div>
             </div>
 
-            {orderedProducts.length === 0 ? <div className='text-white fs-2 mt-3'>Nessun risultato trovato o in caricamento..</div>
+            {orderedProducts.length === 0 ? <div className='text-white fs-2 mt-3'>Nessun risultato trovato..</div>
                 : orderedProducts.map((p) => {
                     return (
 
