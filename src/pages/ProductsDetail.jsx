@@ -5,6 +5,10 @@ import { useCompare } from '../context/CompareContext';
 import { useFavorites } from '../context/FavoritesContext';
 
 const ProductsDetail = () => {
+
+    // variabile per gestire gli id non esistenti
+    const [error, setError] = useState(null);
+
     //Recupero l'ID dal parametro dell'URL.
     const { id } = useParams();
 
@@ -34,10 +38,20 @@ const ProductsDetail = () => {
                 console.error('Errore nel recupero dei dati', error);
                 // Imposta 'product' su 'null' per mostrare il messaggio di errore.
                 setProduct(null);
+                setError('Prodotto non trovato')
             }
         }
         getProductDetail();
     }, [id]);
+
+    if (error) {
+        return (
+            <div className="container my-5 text-white">
+                <h2>Prodotto non trovato..! </h2>
+            </div>
+        );
+    }
+
 
     return (
         <>
