@@ -9,7 +9,7 @@ const ComparePage = () => {
     // destrutturazione del custom hook per i preferiti
     const { favoritiesIds, toggleFavorities } = useFavorites();
 
-    // destrutturo dal custom hook la variabile con gli id e la funzione di clear
+    // destrutturo dal custom hook la variabile con gli id e la funzione di clear e aggiunta/rimozione
     const { compareIds, clearCompare, toggleCompare } = useCompare();
 
     // variabile per contenere i prodotti selezionati

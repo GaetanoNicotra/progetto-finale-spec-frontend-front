@@ -5,10 +5,10 @@ import { useCompare } from '../context/CompareContext'
 
 const Header = () => {
 
-    // destrutturazione del custom hook per i preferiti
+    // destrutturazione del custom hook dei preferiti
     const { favoritiesIds } = useFavorites();
 
-    // destrutturo dal custom hook la variabile con gli id e la funzione di clear
+    // destrutturazione dal custom hook comparatore
     const { compareIds } = useCompare();
 
     return (
@@ -23,8 +23,7 @@ const Header = () => {
                         {compareIds.length > 0 && (
                             <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                                 {compareIds.length}
-                            </span>
-                        )}</Link>
+                            </span>)}</Link>
 
                     <Link to={'/scooters'} className='me-4 fs-2 no-decoration'>🛴</Link>
 
@@ -33,12 +32,9 @@ const Header = () => {
                         {favoritiesIds.length > 0 && (
                             <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                                 {favoritiesIds.length}
-                            </span>
-                        )}
-                    </Link>
+                            </span>)} </Link>
 
                 </div>
-
             </header >
         </>
     )

@@ -14,6 +14,7 @@ const Footer = () => {
                         <a href="#" className="text-info"><i className="fab fa-twitter"></i></a>
                     </div>
                 </div>
+
                 <div className="mb-4 mb-md-0">
                     <h5>TechnoShop</h5>
                     <hr />
@@ -29,9 +30,6 @@ const Footer = () => {
                     <a href="#" className="d-block text-primary text-decoration-none">Privacy</a>
                     <a href="#" className="d-block text-primary text-decoration-none">Termini di servizio</a>
                 </div>
-
-
-
             </div>
         </footer>
     );

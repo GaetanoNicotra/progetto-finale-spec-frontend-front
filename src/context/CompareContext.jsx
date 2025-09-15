@@ -21,13 +21,13 @@ export const CompareProvider = ({ children }) => {
     const clearCompare = () => setCompareIds([]);
 
     return (
-        <CompareContext.Provider value={{ compareIds, toggleCompare, clearCompare }}>
-            {children}
+        <CompareContext.Provider value={{ compareIds, toggleCompare, clearCompare }}>{/* Rende disponibile il contenuto del Provider a tutto ciò che è "figlio" del Provider*/}
+            {children}  {/*children sarà sostituito con i componenti wrappati dal provider in App.jsx*/}
         </CompareContext.Provider>
     );
 };
 
-// Custom hook per accedere facilmente al CompareContext
+// Creo il custom hook per accedere facilmente al CompareContext
 // useContext permette di leggere il valore di un Context
 // CompareContext contiene i dati e le funzioni del comparatore prodotti
 // Chiamando useCompare() in un componente ottengo quello che c'è in CompareContext

@@ -8,11 +8,11 @@ const Favorites = () => {
     // destrutturo dal custom hook le funzioni e le variabili che mi sevono
     const { favoritiesIds, toggleFavorities, clearFavorities } = useFavorites();
 
-    // variabile per contenere i prodotti favoriti selezionati
-    const [prodFavorities, setProdFavorities] = useState([])
-
     // destrutturazione del custom hook per il comparatore
     const { compareIds, toggleCompare } = useCompare();
+
+    // variabile per contenere i prodotti favoriti selezionati
+    const [prodFavorities, setProdFavorities] = useState([]);
 
     // recupero i prodotti con l'id selezionato tramite promise.all per caricare più prodotti in parallelo
     useEffect(() => {
@@ -22,15 +22,16 @@ const Favorites = () => {
                     favoritiesIds.map(id =>
                         fetch(`http://localhost:3001/devices/${id}`)
                             .then(resp => resp.json())
-
                     )
                 )
                 setProdFavorities(results);
+
             } catch (error) {
                 console.error("Errore nel caricamento dei prodotti da confrontare", error);
             }
         }
-        // verifico se sono presnti id nell'array
+
+        // verifico se sono presenti id nell'array
         if (favoritiesIds.length > 0) {
             // quindi richiamo la funzione
             fetchFavoritiesProd();

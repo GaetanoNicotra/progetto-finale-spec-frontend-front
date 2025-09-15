@@ -44,8 +44,7 @@ const ProductsCards = () => {
     const debouncedProduct = useCallback(
         debounce((valDigitato) => {
             setSearchProduct(valDigitato);
-        }, 500),
-        []
+        }, 500), []
     );
 
     // Quando cambia il valore input aggiorna lo stato input immediatamente ma solo dopo il debounce
@@ -61,7 +60,7 @@ const ProductsCards = () => {
 
     // ricerca filtro per titolo 
     const filteredProducts = filteredGenre.filter((p) =>
-        p.title.toLowerCase().replace(/\s+/g, '').includes(searchProduct.toLowerCase().trim().replace(/\s+/g, '')));// (/\s+/g) significa: “trova uno o più spazi ovunque nella stringa” e sostituiscili con ,''
+        p.title.toLowerCase().replace(/\s+/g, '').includes(searchProduct.toLowerCase().replace(/\s+/g, '')));// (/\s+/g) significa: “trova uno o più spazi ovunque nella stringa” e sostituiscili con ,''
 
     // ordinamento alfabetico
     const orderedProducts = [...filteredProducts].sort((a, b) => {
