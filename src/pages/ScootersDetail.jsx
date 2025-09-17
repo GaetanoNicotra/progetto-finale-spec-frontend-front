@@ -68,21 +68,22 @@ const ScootersDetail = () => {
                                 <div className="card-body">
                                     <h3 className="brand">{product.electricscooter.brand}</h3>
                                     <h4 className="card-subtitle mb-2 mt-3 price mb-4">{product.electricscooter.price} €</h4>
-                                    <ul className="list-detail">
-                                        <li className="list-group-item pt-3">
-                                            <strong>Categoria:</strong> {product.electricscooter.category}
+                                    <ul className="list-group bg-white rounded-3 p-3">
+                                        <li className="list-group-item bg-transparent d-flex align-items-center border-0 border-bottom pb-3">
+                                            <i className="bi bi-tags me-2 text-primary"></i>
+                                            <strong className="me-1">Categoria:</strong> {product.electricscooter.category}
                                         </li>
-                                        <hr />
-                                        <li className="list-group-item">
-                                            <strong>Colori:</strong> {product.electricscooter.colors.join(', ')}
+                                        <li className="list-group-item bg-transparent d-flex align-items-center border-0 border-bottom py-3">
+                                            <i className="bi bi-palette me-2 text-success"></i>
+                                            <strong className="me-1">Colori:</strong> {product.electricscooter.colors.join(', ')}
                                         </li>
-                                        <hr />
-                                        <li className="list-group-item">
-                                            <strong>Potenza batteria:</strong> {product.electricscooter.batteryPower} Wh
+                                        <li className="list-group-item bg-transparent d-flex align-items-center border-0 border-bottom py-3">
+                                            <i className="bi bi-lightning-charge-fill me-2 text-warning"></i>
+                                            <strong className="me-1">Potenza batteria:</strong> {product.electricscooter.batteryPower} Wh
                                         </li>
-                                        <hr />
-                                        <li className="list-group-item pb-3">
-                                            <strong >Velocità max:</strong> {product.electricscooter.speed} km/h
+                                        <li className="list-group-item bg-transparent d-flex align-items-center border-0 pt-3">
+                                            <i className="bi bi-speedometer2 me-2 text-danger"></i>
+                                            <strong className="me-1">Velocità max:</strong> {product.electricscooter.speed} km/h
                                         </li>
                                     </ul>
                                 </div>

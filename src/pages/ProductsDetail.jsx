@@ -84,26 +84,27 @@ const ProductsDetail = () => {
                             <div className="card-detail text-white border-secondary h-100">
                                 <div className="card-body">
                                     <h3 className="brand">{product.device.brand}</h3>
-                                    <h4 className="card-subtitle mb-2 mt-3 price mb-4">{product.device.price} €</h4>
-                                    <ul className="list-detail">
-                                        <li className="list-group-item pt-3">
-                                            <strong>Categoria:</strong> {product.device.category}
+                                    <h4 className="card-subtitle mb-2 mt-3 price mb-4 ">{product.device.price} €</h4>
+                                    <ul className="list-group bg-white rounded-3 p-3">
+                                        <li className="list-group-item bg-transparent d-flex align-items-center border-0 border-bottom pb-3">
+                                            <i className="bi bi-tags me-2 text-primary"></i>
+                                            <strong className="me-1">Categoria:</strong> {product.device.category}
                                         </li>
-                                        <hr />
-                                        <li className="list-group-item">
-                                            <strong>Colori:</strong> {product.device.colors.join(', ')}
+                                        <li className="list-group-item bg-transparent d-flex align-items-center border-0 border-bottom py-3">
+                                            <i className="bi bi-palette me-2 text-success"></i>
+                                            <strong className="me-1">Colori:</strong> {product.device.colors.join(', ')}
                                         </li>
-                                        <hr />
-                                        <li className="list-group-item">
-                                            <strong>RAM:</strong> {product.device.ram} GB
+                                        <li className="list-group-item bg-transparent d-flex align-items-center border-0 border-bottom py-3">
+                                            <i className="bi bi-memory me-2 text-warning"></i>
+                                            <strong className="me-1">RAM:</strong> {product.device.ram} GB
                                         </li>
-                                        <hr />
-                                        <li className="list-group-item">
-                                            <strong>Memoria:</strong> {product.device.storage} GB
+                                        <li className="list-group-item bg-transparent d-flex align-items-center border-0 border-bottom py-3">
+                                            <i className="bi bi-hdd me-2 text-danger"></i>
+                                            <strong className="me-1">Memoria:</strong> {product.device.storage} GB
                                         </li>
-                                        <hr />
-                                        <li className="list-group-item pb-3">
-                                            <strong>Display:</strong> {product.device.sizeScreen}"
+                                        <li className="list-group-item bg-transparent d-flex align-items-center border-0 pt-3">
+                                            <i className="bi bi-phone me-2 text-info"></i>
+                                            <strong className="me-1">Display:</strong> {product.device.sizeScreen}"
                                         </li>
                                     </ul>
                                 </div>

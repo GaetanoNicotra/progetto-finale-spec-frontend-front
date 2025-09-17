@@ -110,10 +110,10 @@ const ProductsCards = () => {
                     return (
 
                         <div className='col-lg-3 col-md-4 col-sm-6 mb-4' key={p.id}>
-                            <div className='card card-home p-2 h-100'>
+                            <div className='card card-home p-3 h-100'>
                                 <Link to={`/product/${p.id}`} className="no-decoration">
                                     <h5>{p.title}</h5>
-                                    <p className='fs-6'>{p.category} {p.category === 'tablet' ? '🖥️' : p.category === 'smartphone' ? '📱' : p.category === 'smartwatch' ? '⌚' : '🛴'}</p>
+                                    <p className='fs-6 pt-2'>{p.category} {p.category === 'tablet' ? '🖥️' : p.category === 'smartphone' ? '📱' : p.category === 'smartwatch' ? '⌚' : '🛴'}</p>
                                 </Link>
 
                                 <div className='d-flex justify-content-around'>

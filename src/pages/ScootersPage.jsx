@@ -10,9 +10,6 @@ const ProductsCards = () => {
     // variabile di stato per la ricerca per titolo
     const [searchProduct, setSearchProduct] = useState('')
 
-    // variabile di stato per la ricerca di genere
-    const [searchGenre, setSearchGenre] = useState('')
-
     // variabile di stato per ordinamento A-Z Z-A
     const [order, setOrder] = useState('A-Z');
 
@@ -49,11 +46,9 @@ const ProductsCards = () => {
         debouncedProduct(valDigitato); //chiamo la funzione di debounce che aggiorna setSearchProduct dopo 500ms
     };
 
-    // ricerca per genere
-    const filteredGenre = searchGenre ? products.filter((p) => p.category === searchGenre) : products;
 
     // ricerca filtro per titolo 
-    const filteredProducts = filteredGenre.filter((p) =>
+    const filteredProducts = products.filter((p) =>
         p.title.toLowerCase().includes(searchProduct.toLowerCase()));
 
     // ordinamento alfabetico
@@ -98,7 +93,7 @@ const ProductsCards = () => {
                         : orderedProducts.map((p) => {
                             return (
                                 <div className='col-lg-3 col-md-4 col-sm-6 mb-4' key={p.id}>
-                                    <div className='card card-home p-2 h-100'>
+                                    <div className='card card-home p-3 h-100'>
                                         <Link to={`/scooters/${p.id}`} className="no-decoration">
                                             <h5>{p.title}</h5>
                                             <p className='fs-6'>{p.category} 🛴</p>
