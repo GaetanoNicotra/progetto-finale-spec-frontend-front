@@ -254,4 +254,15 @@ footer {
     max-width: 50px;
   }
 
+  .brand {
+    width: 100%;
+  }
+
+  .price {
+    width: 50%;
+  }
+
+  .p-query {
+    padding-bottom: 15px;
+  }
 }

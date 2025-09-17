@@ -7,11 +7,11 @@ const Footer = () => {
 
                 <div>
                     <h6>Seguici</h6>
-                    <div className="d-flex gap-2 flex-column">
+                    <div className="d-flex gap-2 flex-column ">
                         <hr />
                         <a href="#" className="text-primary"><i className="fab fa-facebook-f"></i></a>
                         <a href="#" className="text-danger"><i className="fab fa-instagram"></i></a>
-                        <a href="#" className="text-info"><i className="fab fa-twitter"></i></a>
+                        <a href="#" className="text-info "><i className="fab fa-twitter p-query"></i></a>
                     </div>
                 </div>
 
